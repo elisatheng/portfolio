@@ -35,3 +35,15 @@ html {
 .app-container {
     height: 1200px;
 }
+
+.banner-title {
+    font-size: 3.8rem;
+}
+.banner-subtitle {
+    font-size: 2.8rem;
+    color: #000;
+}
+
+.v-parallax__image-container {
+    position: fixed !important;
+}

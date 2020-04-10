@@ -8,7 +8,9 @@
                 class="overflow-y-auto mt-12"
                 max-height="1000"
             >
-                <v-container class="app-container pa-0" fluid></v-container>
+                <v-container class="app-container pa-0" fluid>
+                    <Banner/>
+                </v-container>
             </v-sheet>
         </v-card>
     </v-app>
@@ -16,12 +18,14 @@
 
 <script>
     import AppBar from './components/AppBar';
+    import Banner from './components/Banner';
 
     export default {
         name: 'App',
 
         components: {
             AppBar,
+            Banner,
         },
 
         data: () => ({
