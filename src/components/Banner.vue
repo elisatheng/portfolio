@@ -1,16 +1,13 @@
 <template>
     <v-parallax
-        src="@/assets/img/banner-grey.jpg"
-        height="700"
-        class="banner px-app mt-10"
+        :src="background.src"
+        :height="background.height"
+        class="banner px-app mt-10 font-righteous"
     >
-        <v-row
-            align="center"
-            justify="center"
-        >
-            <v-col class="mt-9 pa-0" cols="12">
-                <p class="banner-title font-righteous mb-0">Hello, I am Elisa.</p>
-                <p class="banner-subtitle font-righteous">A Web Developer.</p>
+        <v-row align="center" justify="center">
+            <v-col cols="12" class="pa-0 mt-9">
+                <p class="banner-title mb-0">{{ title }}</p>
+                <p class="banner-subtitle black--text">{{ subtitle }}</p>
             </v-col>
         </v-row>
     </v-parallax>
@@ -21,6 +18,12 @@
         name: 'Banner',
 
         data: () => ({
+            background: {
+                src: require('@/assets/img/banner-grey.jpg'),
+                height: 700,
+            },
+            title: 'Hello, I am Elisa.',
+            subtitle: 'A Web Developer.',
         }),
     }
 </script>
