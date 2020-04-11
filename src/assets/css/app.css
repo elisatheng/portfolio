@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 
 /* GLOBAL
@@ -12,17 +13,37 @@ html {
 /* CUSTOM CLASSES
 ----------------------------- */
 
+.app-block {
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    z-index: 2;
+}
+.app-block, .px-app {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+}
+.app-block, .py-app {
+    padding-top: 6% !important;
+    padding-bottom: 6% !important;
+}
+
+.block-title {
+    margin-bottom: 2.5rem;
+}
+.block-title .title {
+    color: #55b4b0 !important;
+    font-family: 'Righteous', cursive !important;
+    font-size: 1.8rem !important;
+    font-weight: initial;
+    text-transform: uppercase;
+}
+
 .font-righteous {
     font-family: 'Righteous', cursive !important;
 }
 
 .h-100 {
     height: 100% !important;
-}
-
-.px-app {
-    padding-left: 15% !important;
-    padding-right: 15% !important;
 }
 
 
@@ -67,4 +88,12 @@ html {
 }
 .banner-subtitle {
     font-size: 2.8rem;
+}
+
+/* AboutMe */
+.profile {
+    border-radius: 50%;
+}
+.information-description {
+    line-height: 1.8rem;
 }
