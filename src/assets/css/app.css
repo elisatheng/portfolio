@@ -97,3 +97,11 @@ html {
 .information-description {
     line-height: 1.8rem;
 }
+
+/* Course */
+.v-timeline-item__opposite {
+    line-height: initial;
+}
+.timeline-title {
+    word-break: initial;
+}
