@@ -11,6 +11,7 @@
                 <v-container class="app-container pa-0">
                     <Banner/>
                     <AboutMe/>
+                    <Course/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -21,6 +22,7 @@
     import AppBar from './components/AppBar';
     import Banner from './components/Banner';
     import AboutMe from './components/AboutMe';
+    import Course from './components/Course';
 
     export default {
         name: 'App',
@@ -29,6 +31,7 @@
             AppBar,
             Banner,
             AboutMe,
+            Course,
         },
 
         data: () => ({
