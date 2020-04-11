@@ -4,11 +4,11 @@
             <AppBar/>
 
             <v-sheet
-                id="app-content"
-                class="overflow-y-auto mt-12"
-                max-height="1000"
+                id="app-body"
+                class="app-body overflow-y-auto overflow-x-hidden mt-12"
+                max-height="100vh"
             >
-                <v-container class="app-container pa-0" fluid>
+                <v-container class="app-container pa-0">
                     <Banner/>
                 </v-container>
             </v-sheet>

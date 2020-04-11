@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 
+
+/* GLOBAL
+----------------------------- */
+
 html {
     overflow: hidden;
 }
+
+
+/* CUSTOM CLASSES
+----------------------------- */
 
 .font-righteous {
     font-family: 'Righteous', cursive !important;
@@ -10,6 +18,21 @@ html {
 
 .h-100 {
     height: 100% !important;
+}
+
+.px-app {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+}
+
+
+/* AppBar
+----------------------------- */
+
+.nav-link {
+    color: initial !important;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 .logo {
@@ -21,29 +44,27 @@ html {
     width: min-content;
 }
 
-.nav-link {
-    color: initial !important;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
 
-.px-app {
-    padding-left: 15% !important;
-    padding-right: 15% !important;
+/* AppBody
+----------------------------- */
+
+.app-body {
+    position: relative;
+    z-index: 0;
 }
 
 .app-container {
-    height: 1200px;
+    height: 100%;
+    max-width: 100% !important;
 }
 
+/* Banner */
+.v-parallax__image-container {
+    position: fixed !important;
+}
 .banner-title {
     font-size: 3.8rem;
 }
 .banner-subtitle {
     font-size: 2.8rem;
-    color: #000;
-}
-
-.v-parallax__image-container {
-    position: fixed !important;
 }

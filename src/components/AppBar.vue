@@ -4,11 +4,11 @@
         color="white"
         shrink-on-scroll
         prominent
-        scroll-target="#app-content"
+        scroll-target="#app-body"
         class="app-bar px-app font-righteous"
     >
         <v-row class="h-100">
-            <v-col class="header-navleft text-left h-100 pa-0">
+            <v-col class="bar-navleft h-100 pa-0 text-left">
                 <v-list class="d-flex h-100 pa-0">
                     <v-list-item
                         v-for="(item, i) in navleftItems"
@@ -21,7 +21,7 @@
                     </v-list-item>
                 </v-list>
             </v-col>
-            <v-col cols="2" class="header-profile pa-0">
+            <v-col cols="2" class="bar-logo pa-0">
                 <v-toolbar-title class="pa-0">
                     <div class="logo">
                         <v-img
@@ -34,7 +34,7 @@
                     </div>
                 </v-toolbar-title>
             </v-col>
-            <v-col class="header-navright text-right h-100 pa-0">
+            <v-col class="bar-navright h-100 pa-0 text-right">
                 <v-list class="d-flex h-100 pa-0">
                     <v-list-item
                         v-for="(item, i) in navrightItems"
@@ -55,7 +55,7 @@
                                 <v-list-item-content class="pa-0">
                                     <a target="_blank" :href="item.href" class="nav-link">
                                         <v-img
-                                            :src="item.img.path"
+                                            :src="item.img.src"
                                             :alt="item.img.alt"
                                             :height="item.img.size"
                                             :width="item.img.size"
@@ -110,7 +110,7 @@
                 {
                     href: 'https://github.com/elisatheng',
                     img: {
-                        path: require('@/assets/img/socials/github.png'),
+                        src: require('@/assets/img/socials/github.png'),
                         alt: 'Github logo',
                         size: 35,
                     },
@@ -118,7 +118,7 @@
                 {
                     href: 'https://www.linkedin.com/in/elisa-theng/',
                     img: {
-                        path: require('@/assets/img/socials/linkedin.png'),
+                        src: require('@/assets/img/socials/linkedin.png'),
                         alt: 'LinkedIn logo',
                         size: 35,
                     },
@@ -126,7 +126,7 @@
                 {
                     href: 'http://www.viadeo.com/fr/profile/elisatheng',
                     img: {
-                        path: require('@/assets/img/socials/viadeo.png'),
+                        src: require('@/assets/img/socials/viadeo.png'),
                         alt: 'Viadeo logo',
                         size: 35,
                     },
