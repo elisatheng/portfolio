@@ -5,13 +5,14 @@
 
             <v-sheet
                 id="app-body"
-                class="app-body overflow-y-auto overflow-x-hidden mt-12"
+                class="app-body overflow-y-auto overflow-x-hidden"
                 max-height="100vh"
             >
-                <v-container class="app-container pa-0">
+                <v-container class="app-container pa-0 mt-12">
                     <Banner/>
                     <AboutMe/>
                     <Course/>
+                    <Skills/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -23,6 +24,7 @@
     import Banner from './components/Banner';
     import AboutMe from './components/AboutMe';
     import Course from './components/Course';
+    import Skills from './components/Skills';
 
     export default {
         name: 'App',
@@ -32,6 +34,7 @@
             Banner,
             AboutMe,
             Course,
+            Skills,
         },
 
         data: () => ({
