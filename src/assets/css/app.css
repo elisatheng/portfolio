@@ -105,3 +105,16 @@ html {
 .timeline-title {
     word-break: initial;
 }
+
+/* Projects */
+.project {
+    opacity: .7;
+    transition: opacity .4s ease-in-out;
+}
+.project:hover {
+    opacity: initial;
+}
+.project-img {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}

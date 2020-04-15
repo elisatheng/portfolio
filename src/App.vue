@@ -13,6 +13,7 @@
                     <AboutMe/>
                     <Course/>
                     <Skills/>
+                    <Projects/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -25,6 +26,7 @@
     import AboutMe from './components/AboutMe';
     import Course from './components/Course';
     import Skills from './components/Skills';
+    import Projects from './components/Projects';
 
     export default {
         name: 'App',
@@ -35,6 +37,7 @@
             AboutMe,
             Course,
             Skills,
+            Projects,
         },
 
         data: () => ({
