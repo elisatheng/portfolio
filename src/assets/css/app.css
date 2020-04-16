@@ -114,6 +114,9 @@ html {
 .project:hover {
     opacity: initial;
 }
+.project-title {
+    font-size: 1.3rem;
+}
 .project-img {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
