@@ -1,12 +1,12 @@
 <template>
-    <v-card class="skills app-block red white--text">
+    <v-card class="skills app-block grey darken-2 white--text">
         <v-row>
             <v-col cols="12" class="skills-title block-title text-center">
                 <h3 class="title">{{ title }}</h3>
                 <div class="three-dots">
-                    <v-icon size="8" color="white darken-2">mdi-circle</v-icon>
-                    <v-icon size="8" color="white darken-2" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="white darken-2" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="white">mdi-circle</v-icon>
+                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
                 </div>
             </v-col>
             <v-col cols="12" class="skills-content pa-0">
@@ -17,7 +17,7 @@
                         color="black"
                         size="120"
                     >
-                        <span class="white--text">{{ skill }}</span>
+                        <span>{{ skill }}</span>
                     </v-avatar>
                 </v-row>
             </v-col>

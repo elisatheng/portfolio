@@ -7,7 +7,7 @@
         scroll-target="#app-body"
         class="app-bar px-app font-righteous"
     >
-        <v-row class="h-100">
+        <v-row class="h-100 ml-n7">
             <v-col class="bar-navleft h-100 pa-0 text-left">
                 <v-list class="d-flex h-100 pa-0">
                     <v-list-item

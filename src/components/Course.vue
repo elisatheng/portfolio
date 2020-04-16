@@ -1,12 +1,12 @@
 <template>
-    <v-card class="course app-block white">
+    <v-card class="course app-block red white--text">
         <v-row>
             <v-col cols="12" class="course-title block-title text-center">
                 <h3 class="title">{{ title }}</h3>
                 <div class="three-dots">
-                    <v-icon size="8" color="dark darken-2">mdi-circle</v-icon>
-                    <v-icon size="8" color="dark darken-2" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="dark darken-2" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="white">mdi-circle</v-icon>
+                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
                 </div>
             </v-col>
             <v-col cols="12" class="course-timeline pa-0">
@@ -17,7 +17,7 @@
                         :icon="line.icon"
                         large
                         right
-                        color="red lighten-2"
+                        color="grey darken-2"
                     >
                         <template v-slot:opposite>
                             <p

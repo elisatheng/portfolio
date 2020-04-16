@@ -1,12 +1,12 @@
 <template>
-    <v-card class="projects app-block grey darken-2 white--text">
+    <v-card class="projects app-block white">
         <v-row>
-            <v-col cols="12" class="skills-title block-title text-center">
+            <v-col cols="12" class="projects-title block-title text-center">
                 <h3 class="title">{{ title }}</h3>
                 <div class="three-dots">
-                    <v-icon size="8" color="black darken-2">mdi-circle</v-icon>
-                    <v-icon size="8" color="black darken-2" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="black darken-2" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="black">mdi-circle</v-icon>
+                    <v-icon size="8" color="black" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="black" right>mdi-circle</v-icon>
                 </div>
             </v-col>
             <v-col cols="12" class="projects-content pa-0">
@@ -22,7 +22,7 @@
                                 <v-list-item-title class="project-title font-righteous">{{ project.title }}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-dialog v-model="dialog" width="75%">
+                        <v-dialog width="75%">
                             <template v-slot:activator="{ on }">
                                 <v-img
                                     v-on="on"
@@ -34,7 +34,7 @@
                                 ></v-img>
                             </template>
                             <v-card class="project-img-modal">
-                                <v-card-title class="project-title font-righteous" primary-title>
+                                <v-card-title primary-title class="project-title font-righteous">
                                     Project : {{ project.title }}
                                 </v-card-title>
                                 <v-img

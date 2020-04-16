@@ -15,9 +15,9 @@
                         <div class="block-title">
                             <h3 class="title">{{ title }}</h3>
                             <div class="three-dots">
-                                <v-icon size="8" color="white darken-2">mdi-circle</v-icon>
-                                <v-icon size="8" color="white darken-2" right>mdi-circle</v-icon>
-                                <v-icon size="8" color="white darken-2" right>mdi-circle</v-icon>
+                                <v-icon size="8" color="white">mdi-circle</v-icon>
+                                <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                                <v-icon size="8" color="white" right>mdi-circle</v-icon>
                             </div>
                         </div>
                     </v-col>
