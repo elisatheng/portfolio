@@ -92,14 +92,14 @@
                     href: '#course',
                 },
                 {
-                    title: 'Skills',
-                    href: '#skills',
+                    title: 'Projects',
+                    href: '#projects',
                 },
             ],
             navrightItems: [
                 {
-                    title: 'Projects',
-                    href: '#projects',
+                    title: 'Skills',
+                    href: '#skills',
                 },
                 {
                     title: 'Hobbies',
