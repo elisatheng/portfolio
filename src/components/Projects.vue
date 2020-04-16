@@ -15,8 +15,19 @@
                         v-for="(project, i) in projects"
                         :key="i"
                         max-width="420"
+                        @mouseleave="project.overlay = true"
                         class="project mx-auto mb-5"
                     >
+                        <v-overlay
+                            :value="project.overlay"
+                            :absolute="absolute"
+                            class="project-overlay"
+                        >
+                            <div
+                                @mouseover="project.overlay = false"
+                                class="project-overlay-content"
+                            ></div>
+                        </v-overlay>
                         <v-list-item>
                             <v-list-item-content>
                                 <v-list-item-title class="project-title font-righteous">{{ project.title }}</v-list-item-title>
@@ -77,9 +88,11 @@
 
         data: () => ({
             title: 'Projects',
+            absolute: true,
             projects: [
                 {
                     title: 'Sprite Generator CLI',
+                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/sprite-generator-cli.png'),
                         alt: 'Sprite Generator CLI project screenshot',
@@ -94,6 +107,7 @@
                 },
                 {
                     title: 'Pianolator',
+                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/pianolator.png'),
                         alt: 'Pianolator project screenshot',
@@ -109,6 +123,7 @@
                 },
                 {
                     title: 'My Art Paint',
+                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/my-art-paint.png'),
                         alt: 'My Art Paint project screenshot',
@@ -124,6 +139,7 @@
                 },
                 {
                     title: 'File Indexer',
+                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/file-indexer.png'),
                         alt: 'File Indexer project screenshot',

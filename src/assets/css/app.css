@@ -107,11 +107,18 @@ html {
 
 /* Projects */
 .project {
-    opacity: .7;
-    transition: opacity .4s ease-in-out;
+    filter: grayscale(1);
 }
 .project:hover {
-    opacity: initial;
+    filter: grayscale(0);
+}
+.project-overlay {
+    max-height: 100%;
+    max-width: 100%;
+}
+.v-overlay__content, .project-overlay-content {
+    height: 100%;
+    width: 100%;
 }
 .project-title {
     font-size: 1.3rem;
