@@ -128,3 +128,35 @@ html {
     border-bottom: 1px solid #ccc;
     cursor: pointer;
 }
+
+/* Skills */
+.skill-flip {
+    width: 126px;
+}
+.skill-flip .title {
+    display: none;
+}
+.skill-flip .oval-corners {
+    border-radius: 50% !important;
+}
+.skill-flip .body p {
+    margin: 0;
+}
+.skill-flip .info-card {
+    background-color: #000;
+    color: #fff;
+}
+.skill-flip .front .body {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+.skill-flip .back .info-card, .skill-flip .back .body {
+    padding: 0;
+}
+.skill-flip .back p {
+    background-color: #000;
+    border-radius: 50%;
+}
+.skill-flip-img {
+    border-radius: 50%;
+}
