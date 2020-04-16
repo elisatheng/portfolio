@@ -19,16 +19,31 @@
                     >
                         <v-list-item>
                             <v-list-item-content>
-                                <v-list-item-title class="headline">{{ project.title }}</v-list-item-title>
+                                <v-list-item-title class="project-title font-righteous">{{ project.title }}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-img
-                            :src="project.img.src"
-                            :alt="project.img.alt"
-                            height="180"
-                            position="top"
-                            class="project-img"
-                        ></v-img>
+                        <v-dialog v-model="dialog" width="75%">
+                            <template v-slot:activator="{ on }">
+                                <v-img
+                                    v-on="on"
+                                    :src="project.img.src"
+                                    :alt="project.img.alt"
+                                    height="180"
+                                    position="top"
+                                    class="project-img"
+                                ></v-img>
+                            </template>
+                            <v-card class="project-img-modal">
+                                <v-card-title class="project-title font-righteous" primary-title>
+                                    Project : {{ project.title }}
+                                </v-card-title>
+                                <v-img
+                                    :src="project.img.src"
+                                    :alt="project.img.alt"
+                                    class="project-img"
+                                ></v-img>
+                            </v-card>
+                        </v-dialog>
                         <v-card-text>{{ project.description }}</v-card-text>
                         <v-card-actions>
                             <v-btn
