@@ -12,8 +12,8 @@
                     <Banner/>
                     <AboutMe/>
                     <Course/>
-                    <Skills/>
                     <Projects/>
+                    <Skills/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -21,12 +21,12 @@
 </template>
 
 <script>
-    import AppBar from './components/AppBar';
-    import Banner from './components/Banner';
-    import AboutMe from './components/AboutMe';
-    import Course from './components/Course';
-    import Skills from './components/Skills';
-    import Projects from './components/Projects';
+    import AppBar from './components/AppBar'
+    import Banner from './components/Banner'
+    import AboutMe from './components/AboutMe'
+    import Course from './components/Course'
+    import Projects from './components/Projects'
+    import Skills from './components/Skills'
 
     export default {
         name: 'App',
@@ -36,11 +36,11 @@
             Banner,
             AboutMe,
             Course,
-            Skills,
             Projects,
+            Skills,
         },
 
         data: () => ({
         }),
-    };
+    }
 </script>
