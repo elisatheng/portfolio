@@ -15,6 +15,7 @@
                     <Projects/>
                     <Skills/>
                     <Hobbies/>
+                    <AppFooter/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -29,6 +30,7 @@
     import Projects from './components/Projects'
     import Skills from './components/Skills'
     import Hobbies from './components/Hobbies'
+    import AppFooter from './components/AppFooter'
 
     export default {
         name: 'App',
@@ -41,6 +43,7 @@
             Projects,
             Skills,
             Hobbies,
+            AppFooter,
         },
 
         data: () => ({
