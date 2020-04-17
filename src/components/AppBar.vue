@@ -16,7 +16,13 @@
                         class="nav-item d-flex align-self-end pa-0"
                     >
                         <v-list-item-content class="pa-0">
-                            <a :href="item.href" class="nav-link">{{ item.title }}</a>
+                            <a
+                                :href="item.href"
+                                class="nav-link"
+                                v-on:click="handleNavigation"
+                            >
+                                {{ item.title }}
+                            </a>
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>
@@ -42,7 +48,13 @@
                         class="nav-item d-flex align-self-end pa-0"
                     >
                         <v-list-item-content class="pa-0">
-                            <a :href="item.href" class="nav-link">{{ item.title }}</a>
+                            <a
+                                :href="item.href"
+                                class="nav-link"
+                                v-on:click="handleNavigation"
+                            >
+                                {{ item.title }}
+                            </a>
                         </v-list-item-content>
                     </v-list-item>
                     <v-list-item class="nav-item d-flex align-self-end pa-0">
@@ -75,6 +87,26 @@
 <script>
     export default {
         name: 'AppBar',
+
+        methods: {
+            handleActiveLink($targetLink) {
+                document.querySelectorAll('.nav-link').forEach(function($navLink) {
+                    if ($navLink.classList.contains('nav-link-active')) {
+                        $navLink.classList.remove('nav-link-active')
+                    }
+                })
+
+                $targetLink.classList.add('nav-link-active')
+            },
+
+            handleNavigation(event) {
+                this.handleActiveLink(event.target)
+
+                setTimeout(() => {
+                    window.history.replaceState('', document.title, window.location.origin + window.location.pathname)
+                }, 5);
+            }
+        },
 
         data: () => ({
             logo: {

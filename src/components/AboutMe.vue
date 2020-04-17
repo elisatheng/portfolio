@@ -1,5 +1,5 @@
 <template>
-    <v-card class="aboutme app-block black white--text">
+    <v-card class="aboutme app-block black white--text" id="aboutme">
         <v-row>
             <v-col cols="6" class="aboutme-profile">
                 <v-img
