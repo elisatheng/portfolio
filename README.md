@@ -1,7 +1,8 @@
 # Portfolio
-My personal website
+My personal website in vuejs
 
 ## Project setup
+- Install dependencies
 ```
 yarn install
 ```
