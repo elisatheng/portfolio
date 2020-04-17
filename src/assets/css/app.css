@@ -160,3 +160,8 @@ html {
 .skill-flip-img {
     border-radius: 50%;
 }
+
+/* Hobbies */
+.hobby-icon {
+    border: 1px solid #666;
+}
