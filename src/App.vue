@@ -14,6 +14,7 @@
                     <Course/>
                     <Projects/>
                     <Skills/>
+                    <Hobbies/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -27,6 +28,7 @@
     import Course from './components/Course'
     import Projects from './components/Projects'
     import Skills from './components/Skills'
+    import Hobbies from './components/Hobbies'
 
     export default {
         name: 'App',
@@ -38,6 +40,7 @@
             Course,
             Projects,
             Skills,
+            Hobbies,
         },
 
         data: () => ({
