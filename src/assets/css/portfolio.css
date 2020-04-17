@@ -1,0 +1,153 @@
+/* AppHeader
+----------------------------- */
+
+.ptfl-header__logo--bg {
+    background-color: #fff;
+    border-bottom: 2px solid #999;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: .3rem;
+    width: min-content;
+}
+
+.ptfl-header__nav-link {
+    color: initial !important;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.ptfl-header__nav-link--active {
+    color: #33cccc !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.ptfl-header__nav-img {
+    border: 2px solid #fff;
+}
+
+.ptfl-header__nav-img:hover {
+    border: none;
+}
+
+
+/* AppBody
+----------------------------- */
+
+.ptfl-body {
+    position: relative;
+    z-index: 0;
+    scroll-behavior: smooth;
+}
+
+.ptfl-container {
+    max-width: 100% !important;
+}
+
+/* Banner */
+
+.ptfl-banner .v-parallax__image-container {
+    position: fixed !important;
+}
+
+.ptfl-banner__title {
+    font-size: 3.8rem;
+}
+
+.ptfl-banner__subtitle {
+    font-size: 2.8rem;
+}
+
+/* AboutMe */
+
+.ptfl-aboutme__content-description {
+    line-height: 1.8rem;
+}
+
+/* Course */
+
+.pftl-course .v-timeline-item__opposite {
+    line-height: initial;
+}
+
+.ptfl-course__timeline-title {
+    word-break: initial;
+}
+
+/* Projects */
+
+.ptfl-projects__card--grayscale {
+    filter: grayscale(1);
+}
+
+.ptfl-projects__card--grayscale:hover {
+    filter: grayscale(0);
+}
+
+.ptfl-projects__card-overlay {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.ptfl-projects .v-overlay__content, .ptfl-projects__card-overlay-content {
+    height: 100%;
+    width: 100%;
+}
+
+.ptfl-projects__card-head {
+    font-size: 1.3rem;
+}
+
+.ptfl-projects__card-img {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Skills */
+
+.ptfl-skills__flip-card {
+    width: 126px;
+}
+
+.ptfl-skills__flip-card .title {
+    display: none;
+}
+
+.ptfl-skills__flip-card .oval-corners {
+    border-radius: 50% !important;
+}
+
+.ptfl-skills__flip-card .body p {
+    margin: 0;
+}
+
+.ptfl-skills__flip-card .info-card {
+    background-color: #000;
+    color: #fff;
+}
+
+.ptfl-skills__flip-card .front .body {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.ptfl-skills__flip-card .back .info-card, .ptfl-skills__flip-card .back .body {
+    padding: 0;
+}
+
+.ptfl-skills__flip-card .back p {
+    background-color: #000;
+    border-radius: 50%;
+}
+
+/* Hobbies */
+
+.ptfl-hobbies__card-icon {
+    border: 1px solid #666;
+}
+
+/* AppFooter */
+
+.ptfl-footer {
+    font-size: small;
+}

@@ -1,5 +1,5 @@
 <template>
-    <v-card class="app-footer px-app white text-center">
+    <v-card class="ptfl-footer ptfl-px white text-center">
         <v-row>
             <v-col cols="12">
                 <p class="mb-0">

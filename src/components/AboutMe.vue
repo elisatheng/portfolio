@@ -1,36 +1,32 @@
 <template>
-    <v-card class="aboutme app-block black white--text" id="aboutme">
+    <v-card class="ptfl-aboutme ptfl-card black white--text" id="aboutme">
         <v-row>
-            <v-col cols="6" class="aboutme-profile">
+            <v-col cols="6" class="ptfl-aboutme__profile">
                 <v-img
                     :src="profile.src"
                     :height="profile.size"
                     :width="profile.size"
-                    class="profile mx-auto"
+                    class="ptfl-border--round mx-auto"
                 ></v-img>
             </v-col>
-            <v-col cols="6" class="aboutme-information">
-                <v-row>
-                    <v-col cols="12" class="information-title pa-0">
-                        <div class="block-title">
-                            <h3 class="title">{{ title }}</h3>
-                            <div class="three-dots">
-                                <v-icon size="8" color="white">mdi-circle</v-icon>
-                                <v-icon size="8" color="white" right>mdi-circle</v-icon>
-                                <v-icon size="8" color="white" right>mdi-circle</v-icon>
-                            </div>
-                        </div>
-                    </v-col>
-                    <v-col cols="12" class="information-description pa-0">
-                        <p
-                            v-for="text in information"
-                            :key="text"
-                            class="text-justify"
-                        >
-                            {{ text }}
-                        </p>
-                    </v-col>
-                </v-row>
+            <v-col cols="6" class="ptfl-aboutme__content">
+                <div class="ptfl-card__head">
+                    <h3 class="ptfl-card__head-title">{{ title }}</h3>
+                    <div class="three-dots">
+                        <v-icon size="8" color="white">mdi-circle</v-icon>
+                        <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                        <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                    </div>
+                </div>
+                <div class="ptfl-aboutme__content-description">
+                    <p
+                        v-for="text in information"
+                        :key="text"
+                        class="text-justify"
+                    >
+                        {{ text }}
+                    </p>
+                </div>
             </v-col>
         </v-row>
     </v-card>

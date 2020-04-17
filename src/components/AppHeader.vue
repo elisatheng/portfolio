@@ -4,21 +4,21 @@
         color="white"
         shrink-on-scroll
         prominent
-        scroll-target="#app-body"
-        class="app-bar px-app font-righteous"
+        scroll-target="#ptfl-body"
+        class="ptfl-header ptfl-px ptfl--font-righteous"
     >
-        <v-row class="h-100 ml-n7">
-            <v-col class="bar-navleft h-100 pa-0 text-left">
-                <v-list class="d-flex h-100 pa-0">
+        <v-row class="ptfl--height-full ml-n7">
+            <v-col class="ptfl-header__navleft ptfl--height-full pa-0 text-left">
+                <v-list class="d-flex ptfl--height-full pa-0">
                     <v-list-item
                         v-for="(item, i) in navleftItems"
                         :key="i"
-                        class="nav-item d-flex align-self-end pa-0"
+                        class="d-flex align-self-end pa-0"
                     >
                         <v-list-item-content class="pa-0">
                             <a
                                 :href="item.href"
-                                class="nav-link"
+                                class="ptfl-header__nav-link"
                                 v-on:click="handleNavigation"
                             >
                                 {{ item.title }}
@@ -27,9 +27,9 @@
                     </v-list-item>
                 </v-list>
             </v-col>
-            <v-col cols="2" class="bar-logo pa-0">
-                <v-toolbar-title class="h-100 pa-0">
-                    <div class="logo">
+            <v-col cols="2" class="ptfl-header__logo pa-0">
+                <v-toolbar-title class="ptfl--height-full pa-0">
+                    <div class="ptfl-header__logo--bg">
                         <v-img
                             :src="logo.src"
                             :alt="logo.alt"
@@ -40,38 +40,38 @@
                     </div>
                 </v-toolbar-title>
             </v-col>
-            <v-col class="bar-navright h-100 pa-0 text-right">
-                <v-list class="d-flex h-100 pa-0">
+            <v-col class="ptfl-header__navright ptfl--height-full pa-0 text-right">
+                <v-list class="d-flex ptfl--height-full pa-0">
                     <v-list-item
                         v-for="(item, i) in navrightItems"
                         :key="i"
-                        class="nav-item d-flex align-self-end pa-0"
+                        class="d-flex align-self-end pa-0"
                     >
                         <v-list-item-content class="pa-0">
                             <a
                                 :href="item.href"
-                                class="nav-link"
+                                class="ptfl-header__nav-link"
                                 v-on:click="handleNavigation"
                             >
                                 {{ item.title }}
                             </a>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item class="nav-item d-flex align-self-end pa-0">
+                    <v-list-item class="d-flex align-self-end pa-0">
                         <v-list class="nav-socials d-flex ml-auto pa-0">
                             <v-list-item
                                 v-for="(item, i) in socials"
                                 :key="i"
-                                class="nav-item d-flex align-self-end px-1"
+                                class="d-flex align-self-end px-1"
                             >
                                 <v-list-item-content class="pa-0">
-                                    <a target="_blank" :href="item.href" class="nav-link">
+                                    <a target="_blank" :href="item.href" class="ptfl-header__nav-link">
                                         <v-img
                                             :src="item.img.src"
                                             :alt="item.img.alt"
                                             :height="item.img.size"
                                             :width="item.img.size"
-                                            class="nav-img v-btn--round"
+                                            class="ptfl-header__nav-img v-btn--round"
                                         />
                                     </a>
                                 </v-list-item-content>
@@ -90,13 +90,13 @@
 
         methods: {
             handleActiveLink($targetLink) {
-                document.querySelectorAll('.nav-link').forEach(function($navLink) {
-                    if ($navLink.classList.contains('nav-link-active')) {
-                        $navLink.classList.remove('nav-link-active')
+                document.querySelectorAll('.ptfl-header__nav-link').forEach(function($navLink) {
+                    if ($navLink.classList.contains('ptfl-header__nav-link--active')) {
+                        $navLink.classList.remove('ptfl-header__nav-link--active')
                     }
                 })
 
-                $targetLink.classList.add('nav-link-active')
+                $targetLink.classList.add('ptfl-header__nav-link--active')
             },
 
             handleNavigation(event) {
