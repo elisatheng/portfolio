@@ -22,7 +22,7 @@
                 </v-list>
             </v-col>
             <v-col cols="2" class="bar-logo pa-0">
-                <v-toolbar-title class="pa-0">
+                <v-toolbar-title class="h-100 pa-0">
                     <div class="logo">
                         <v-img
                             :src="logo.src"
