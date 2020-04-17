@@ -1,25 +1,27 @@
 <template>
-    <v-card class="hobbies app-block teal lighten-3" id="hobbies">
+    <v-card class="ptfl-hobbies ptfl-card teal lighten-3" id="hobbies">
         <v-row>
-            <v-col cols="12" class="hobbies-title block-title text-center">
-                <h3 class="title white--text">{{ title }}</h3>
+            <v-col cols="12" class="ptfl-card__head text-center">
+                <h3 class="ptfl-card__head-title white--text">{{ title }}</h3>
                 <div class="three-dots">
                     <v-icon size="8" color="black">mdi-circle</v-icon>
                     <v-icon size="8" color="black" right>mdi-circle</v-icon>
                     <v-icon size="8" color="black" right>mdi-circle</v-icon>
                 </div>
             </v-col>
-            <v-col cols="12" class="hobbies-content pa-0">
+        </v-row>
+        <v-row>
+            <v-col cols="12" class="ptfl-card__content pa-0">
                 <v-row justify="space-around" class="text-center">
                     <v-col
                         v-for="(hobby, i) in hobbies"
                         :key="i"
-                        class="hobby pa-0"
+                        class="pa-0"
                     >
                         <v-avatar size="80" class="mb-3">
-                            <v-icon size="50" class="hobby-icon">{{ hobby.icon }}</v-icon>
+                            <v-icon size="50" class="ptfl-hobbies__card-icon">{{ hobby.icon }}</v-icon>
                         </v-avatar>
-                        <div class="hobby-description">
+                        <div>
                             <p
                                 v-for="text in hobby.description"
                                 :key="text"

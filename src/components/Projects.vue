@@ -1,36 +1,40 @@
 <template>
-    <v-card class="projects app-block white" id="projects">
+    <v-card class="ptfl-projects ptfl-card white" id="projects">
         <v-row>
-            <v-col cols="12" class="projects-title block-title text-center">
-                <h3 class="title">{{ title }}</h3>
+            <v-col cols="12" class="ptfl-card__head text-center">
+                <h3 class="ptfl-card__head-title">{{ title }}</h3>
                 <div class="three-dots">
                     <v-icon size="8" color="black">mdi-circle</v-icon>
                     <v-icon size="8" color="black" right>mdi-circle</v-icon>
                     <v-icon size="8" color="black" right>mdi-circle</v-icon>
                 </div>
             </v-col>
-            <v-col cols="12" class="projects-content pa-0">
+        </v-row>
+        <v-row>
+            <v-col cols="12" class="ptfl-card__content pa-0">
                 <v-row justify="space-around" class="text-center">
                     <v-card
                         v-for="(project, i) in projects"
                         :key="i"
                         max-width="420"
                         @mouseleave="project.overlay = true"
-                        class="project mx-auto mb-5"
+                        class="ptfl-projects__card ptfl-projects__card--grayscale mx-auto mb-5"
                     >
                         <v-overlay
                             :value="project.overlay"
                             :absolute="absolute"
-                            class="project-overlay"
+                            class="ptfl-projects__card-overlay"
                         >
                             <div
                                 @mouseover="project.overlay = false"
-                                class="project-overlay-content"
+                                class="ptfl-projects__card-overlay-content"
                             ></div>
                         </v-overlay>
                         <v-list-item>
                             <v-list-item-content>
-                                <v-list-item-title class="project-title font-righteous">{{ project.title }}</v-list-item-title>
+                                <v-list-item-title class="ptfl-projects__card-head ptfl--font-righteous">
+                                    {{ project.title }}
+                                </v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
                         <v-dialog width="75%">
@@ -41,17 +45,17 @@
                                     :alt="project.img.alt"
                                     height="180"
                                     position="top"
-                                    class="project-img"
+                                    class="ptfl-projects__card-img"
                                 ></v-img>
                             </template>
-                            <v-card class="project-img-modal">
-                                <v-card-title primary-title class="project-title font-righteous">
+                            <v-card>
+                                <v-card-title primary-title class="ptfl-projects__card-head ptfl--font-righteous">
                                     Project : {{ project.title }}
                                 </v-card-title>
                                 <v-img
                                     :src="project.img.src"
                                     :alt="project.img.alt"
-                                    class="project-img"
+                                    class="ptfl-projects__card-img"
                                 ></v-img>
                             </v-card>
                         </v-dialog>
@@ -62,6 +66,7 @@
                                 disabled
                                 v-for="(techno, i) in project.technos"
                                 :key="i"
+                                class="px-0"
                             >
                                 {{ techno }}
                             </v-btn>

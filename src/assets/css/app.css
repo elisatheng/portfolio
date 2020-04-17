@@ -13,173 +13,42 @@ html {
 /* CUSTOM CLASSES
 ----------------------------- */
 
-.app-block {
+.ptfl-card {
     font-family: 'Comfortaa', cursive;
     position: relative;
     z-index: 2;
 }
-.app-block, .px-app {
+
+.ptfl-card, .ptfl-px {
     padding-left: 15% !important;
     padding-right: 15% !important;
 }
-.app-block, .py-app {
+
+.ptfl-card, .ptfl-py {
     padding-top: 6% !important;
     padding-bottom: 6% !important;
 }
 
-.block-title {
+.ptfl-card__head {
     margin-bottom: 2.5rem;
 }
-.block-title .title {
+
+.ptfl-card__head-title {
     color: #33cccc;
     font-family: 'Righteous', cursive !important;
     font-size: 2.2rem !important;
+    font-weight: normal;
     text-transform: uppercase;
 }
 
-.font-righteous {
+.ptfl--font-righteous {
     font-family: 'Righteous', cursive !important;
 }
 
-.h-100 {
+.ptfl--height-full {
     height: 100% !important;
 }
 
-
-/* AppBar
------------------------------ */
-
-.nav-link {
-    color: initial !important;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-.nav-link-active {
-    color: #33cccc !important;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-img {
-    border: 2px solid #fff;
-}
-.nav-img:hover {
-    border: none;
-}
-
-.logo {
-    background-color: #fff;
-    border-bottom: 2px solid #999;
+.ptfl-border--round {
     border-radius: 50%;
-    margin: 0 auto;
-    padding: .3rem;
-    width: min-content;
-}
-
-
-/* AppBody
------------------------------ */
-
-.app-body {
-    position: relative;
-    z-index: 0;
-    scroll-behavior: smooth;
-}
-
-.app-container {
-    height: 100%;
-    max-width: 100% !important;
-}
-
-/* Banner */
-.v-parallax__image-container {
-    position: fixed !important;
-}
-.banner-title {
-    font-size: 3.8rem;
-}
-.banner-subtitle {
-    font-size: 2.8rem;
-}
-
-/* AboutMe */
-.profile {
-    border-radius: 50%;
-}
-.information-description {
-    line-height: 1.8rem;
-}
-
-/* Course */
-.v-timeline-item__opposite {
-    line-height: initial;
-}
-.timeline-title {
-    word-break: initial;
-}
-
-/* Projects */
-.project {
-    filter: grayscale(1);
-}
-.project:hover {
-    filter: grayscale(0);
-}
-.project-overlay {
-    max-height: 100%;
-    max-width: 100%;
-}
-.v-overlay__content, .project-overlay-content {
-    height: 100%;
-    width: 100%;
-}
-.project-title {
-    font-size: 1.3rem;
-}
-.project-img {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-}
-
-/* Skills */
-.skill-flip {
-    width: 126px;
-}
-.skill-flip .title {
-    display: none;
-}
-.skill-flip .oval-corners {
-    border-radius: 50% !important;
-}
-.skill-flip .body p {
-    margin: 0;
-}
-.skill-flip .info-card {
-    background-color: #000;
-    color: #fff;
-}
-.skill-flip .front .body {
-    margin-top: 50%;
-    transform: translateY(-50%);
-}
-.skill-flip .back .info-card, .skill-flip .back .body {
-    padding: 0;
-}
-.skill-flip .back p {
-    background-color: #000;
-    border-radius: 50%;
-}
-.skill-flip-img {
-    border-radius: 50%;
-}
-
-/* Hobbies */
-.hobby-icon {
-    border: 1px solid #666;
-}
-
-/* AppFooter */
-.app-footer {
-    font-size: small;
 }

@@ -1,15 +1,15 @@
 <template>
     <v-app>
         <v-card class="overflow-hidden">
-            <AppBar/>
+            <AppHeader/>
 
             <v-sheet
-                id="app-body"
-                class="app-body overflow-y-auto overflow-x-hidden"
+                id="ptfl-body"
+                class="ptfl-body overflow-y-auto overflow-x-hidden"
                 max-height="100vh"
                 v-on:scroll="handleNavigationScroll"
             >
-                <v-container class="app-container pa-0 mt-12">
+                <v-container class="ptfl-container ptfl--height-full pa-0 mt-12">
                     <Banner/>
                     <AboutMe/>
                     <Course/>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import AppBar from './components/AppBar'
+    import AppHeader from './components/AppHeader'
     import Banner from './components/Banner'
     import AboutMe from './components/AboutMe'
     import Course from './components/Course'
@@ -37,7 +37,7 @@
         name: 'App',
 
         components: {
-            AppBar,
+            AppHeader,
             Banner,
             AboutMe,
             Course,
@@ -49,11 +49,11 @@
 
         methods: {
             getPositionBlocks() {
-                const $blocks = document.querySelectorAll('.app-block')
+                const $body = document.querySelector('#ptfl-body')
+                const $blocks = document.querySelectorAll('.ptfl-card')
                 let positions = {}
 
                 $blocks.forEach(function($block, i) {
-                    const $body = document.querySelector('#app-body')
                     const blockPositionTop = $block.offsetTop - ($block.offsetTop * 0.04)
                     let blockPositionBottom = $body.scrollHeight
 
@@ -72,18 +72,18 @@
             },
 
             handleActiveLink($targetLink) {
-                document.querySelectorAll('.nav-link').forEach(function($navLink) {
-                    if ($navLink.classList.contains('nav-link-active')) {
-                        $navLink.classList.remove('nav-link-active')
+                document.querySelectorAll('.ptfl-header__nav-link').forEach(function($navLink) {
+                    if ($navLink.classList.contains('ptfl-header__nav-link--active')) {
+                        $navLink.classList.remove('ptfl-header__nav-link--active')
                     }
                 })
 
-                $targetLink.classList.add('nav-link-active')
+                $targetLink.classList.add('ptfl-header__nav-link--active')
             },
 
             handleNavigationScroll(event) {
                 for (const id in this.positionBlocks) {
-                    const $targetLink = document.querySelector('.nav-link[href="#' + id + '"]')
+                    const $targetLink = document.querySelector('.ptfl-header__nav-link[href="#' + id + '"]')
 
                     if (
                         event.target.scrollTop >= this.positionBlocks[id].top
@@ -91,7 +91,7 @@
                     ) {
                         this.handleActiveLink($targetLink)
                     } else {
-                        $targetLink.classList.remove('nav-link-active')
+                        $targetLink.classList.remove('ptfl-header__nav-link--active')
                     }
                 }
             },

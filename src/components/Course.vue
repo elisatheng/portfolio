@@ -1,15 +1,17 @@
 <template>
-    <v-card class="course app-block red white--text" id="course">
+    <v-card class="pftl-course ptfl-card red white--text" id="course">
         <v-row>
-            <v-col cols="12" class="course-title block-title text-center">
-                <h3 class="title">{{ title }}</h3>
+            <v-col cols="12" class="ptfl-card__head text-center">
+                <h3 class="ptfl-card__head-title">{{ title }}</h3>
                 <div class="three-dots">
                     <v-icon size="8" color="white">mdi-circle</v-icon>
                     <v-icon size="8" color="white" right>mdi-circle</v-icon>
                     <v-icon size="8" color="white" right>mdi-circle</v-icon>
                 </div>
             </v-col>
-            <v-col cols="12" class="course-timeline pa-0">
+        </v-row>
+        <v-row>
+            <v-col cols="12" class="pftl-card__content pa-0">
                 <v-timeline>
                     <v-timeline-item
                         v-for="(line, i) in timelines"
@@ -28,7 +30,7 @@
                             </p>
                         </template>
                         <v-card class="elevation-2">
-                            <v-card-title class="timeline-title font-righteous">
+                            <v-card-title class="ptfl-course__timeline-title ptfl--font-righteous">
                                 {{ line.title }}
                             </v-card-title>
                             <v-card-text>

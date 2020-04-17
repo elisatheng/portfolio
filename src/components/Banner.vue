@@ -2,12 +2,12 @@
     <v-parallax
         :src="background.src"
         :height="background.height"
-        class="banner px-app mt-10 font-righteous"
+        class="ptfl-banner ptfl-px mt-10 ptfl--font-righteous"
     >
         <v-row align="center" justify="center">
             <v-col cols="12" class="pa-0 mt-9">
-                <p class="banner-title mb-0">{{ title }}</p>
-                <p class="banner-subtitle black--text">{{ subtitle }}</p>
+                <p class="ptfl-banner__title mb-0">{{ title }}</p>
+                <p class="ptfl-banner__subtitle black--text">{{ subtitle }}</p>
             </v-col>
         </v-row>
     </v-parallax>
