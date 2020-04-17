@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-card class="overflow-hidden">
-            <AppHeader/>
+            <app-header/>
 
             <v-sheet
                 id="ptfl-body"
@@ -10,13 +10,13 @@
                 v-on:scroll="handleNavigationScroll"
             >
                 <v-container class="ptfl-container ptfl--height-full pa-0 mt-12">
-                    <Banner/>
-                    <AboutMe/>
-                    <Course/>
-                    <Projects/>
-                    <Skills/>
-                    <Hobbies/>
-                    <AppFooter/>
+                    <banner/>
+                    <about-me/>
+                    <course/>
+                    <projects/>
+                    <skills/>
+                    <hobbies/>
+                    <app-footer/>
                 </v-container>
             </v-sheet>
         </v-card>
@@ -24,28 +24,8 @@
 </template>
 
 <script>
-    import AppHeader from './components/AppHeader'
-    import Banner from './components/Banner'
-    import AboutMe from './components/AboutMe'
-    import Course from './components/Course'
-    import Projects from './components/Projects'
-    import Skills from './components/Skills'
-    import Hobbies from './components/Hobbies'
-    import AppFooter from './components/AppFooter'
-
     export default {
         name: 'App',
-
-        components: {
-            AppHeader,
-            Banner,
-            AboutMe,
-            Course,
-            Projects,
-            Skills,
-            Hobbies,
-            AppFooter,
-        },
 
         methods: {
             getPositionBlocks() {
