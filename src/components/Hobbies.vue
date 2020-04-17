@@ -1,5 +1,5 @@
 <template>
-    <v-card class="hobbies app-block teal lighten-3">
+    <v-card class="hobbies app-block teal lighten-3" id="hobbies">
         <v-row>
             <v-col cols="12" class="hobbies-title block-title text-center">
                 <h3 class="title white--text">{{ title }}</h3>
