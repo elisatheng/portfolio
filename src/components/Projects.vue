@@ -16,20 +16,8 @@
                     <v-card
                         v-for="(project, i) in projects"
                         :key="i"
-                        max-width="420"
-                        @mouseleave="project.overlay = true"
-                        class="ptfl-projects__card ptfl-projects__card--grayscale mx-auto mb-5"
+                        class="ptfl-projects__card mx-auto mb-5 col-12 col-md-5 elevation-4"
                     >
-                        <v-overlay
-                            :value="project.overlay"
-                            :absolute="absolute"
-                            class="ptfl-projects__card-overlay"
-                        >
-                            <div
-                                @mouseover="project.overlay = false"
-                                class="ptfl-projects__card-overlay-content"
-                            ></div>
-                        </v-overlay>
                         <v-list-item>
                             <v-list-item-content>
                                 <v-list-item-title class="ptfl-projects__card-head ptfl--font-righteous">
@@ -37,28 +25,13 @@
                                 </v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-dialog>
-                            <template v-slot:activator="{ on }">
-                                <v-img
-                                    v-on="on"
-                                    :src="project.img.src"
-                                    :alt="project.img.alt"
-                                    height="180"
-                                    position="top"
-                                    class="ptfl-projects__card-img"
-                                ></v-img>
-                            </template>
-                            <v-card>
-                                <v-card-title primary-title class="ptfl-projects__card-head ptfl--font-righteous">
-                                    Project : {{ project.title }}
-                                </v-card-title>
-                                <v-img
-                                    :src="project.img.src"
-                                    :alt="project.img.alt"
-                                    class="ptfl-projects__card-img"
-                                ></v-img>
-                            </v-card>
-                        </v-dialog>
+                        <v-img
+                            :src="project.img.src"
+                            :alt="project.img.alt"
+                            height="300"
+                            :position="project.img.position"
+                            class="ptfl-projects__card-img"
+                        ></v-img>
                         <v-card-text>{{ project.description }}</v-card-text>
                         <v-card-actions>
                             <v-btn
@@ -93,14 +66,13 @@
 
         data: () => ({
             title: 'Projects',
-            absolute: true,
             projects: [
                 {
                     title: 'Sprite Generator CLI',
-                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/sprite-generator-cli.png'),
                         alt: 'Sprite Generator CLI project screenshot',
+                        position: 'top left',
                     },
                     description: 'A sprite generator in command-line interface',
                     link: 'https://github.com/elisatheng/sprite-generator-cli',
@@ -112,10 +84,10 @@
                 },
                 {
                     title: 'Pianolator',
-                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/pianolator.png'),
                         alt: 'Pianolator project screenshot',
+                        position: 'top',
                     },
                     description: 'A simple calculator in jQuery and responsive',
                     link: 'https://github.com/elisatheng/pianolator',
@@ -128,10 +100,10 @@
                 },
                 {
                     title: 'My Art Paint',
-                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/my-art-paint.png'),
                         alt: 'My Art Paint project screenshot',
+                        position: 'top left',
                     },
                     description: 'A simple \'paint-like\' in jQuery and responsive',
                     link: 'https://github.com/elisatheng/my-art-paint',
@@ -144,10 +116,10 @@
                 },
                 {
                     title: 'File Indexer',
-                    overlay: true,
                     img: {
                         src: require('@/assets/img/projects/file-indexer.png'),
                         alt: 'File Indexer project screenshot',
+                        position: 'top right',
                     },
                     description: 'A modern file indexer for HTTP web servers with focus on your files',
                     link: 'https://github.com/elisatheng/file-indexer',
