@@ -14,8 +14,8 @@
             <v-col cols="12" class="ptfl-card__content pa-0">
                 <v-row justify="space-around" class="text-center">
                     <v-card
-                        v-for="(project, i) in projects"
-                        :key="i"
+                        v-for="project in projects"
+                        :key="project.id"
                         class="ptfl-projects__card mx-auto mb-5 col-12 col-md-5 elevation-4"
                     >
                         <v-list-item>
@@ -35,10 +35,10 @@
                         <v-card-text>{{ project.description }}</v-card-text>
                         <v-card-actions>
                             <v-btn
+                                v-for="techno in project.technos"
+                                :key="techno.id"
                                 text
                                 disabled
-                                v-for="(techno, i) in project.technos"
-                                :key="i"
                                 class="px-0"
                             >
                                 {{ techno }}
