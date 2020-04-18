@@ -80,32 +80,20 @@
 
 /* Projects */
 
-.ptfl-projects__card--grayscale {
-    filter: grayscale(1);
-}
-
-.ptfl-projects__card--grayscale:hover {
-    filter: grayscale(0);
-}
-
-.ptfl-projects__card-overlay {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.ptfl-projects .v-overlay__content, .ptfl-projects__card-overlay-content {
-    height: 100%;
-    width: 100%;
-}
-
 .ptfl-projects__card-head {
     font-size: 1.3rem;
 }
 
 .ptfl-projects__card-img {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #a6a6a6;
+    border-bottom: 1px solid #a6a6a6;
     cursor: pointer;
+    filter: grayscale(1);
+    transition: filter .3s ease-in-out;
+}
+
+.ptfl-projects__card:hover .ptfl-projects__card-img {
+    filter: grayscale(0);
 }
 
 /* Skills */
