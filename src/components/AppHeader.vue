@@ -97,13 +97,16 @@
             <v-col cols="5" md="2" class="ptfl-header__logo pa-0">
                 <v-toolbar-title class="ptfl--height-full pa-0">
                     <div class="ptfl-header__logo--bg">
-                        <v-img
-                            :src="logo.src"
-                            :alt="logo.alt"
-                            :height="logo.size"
-                            :width="logo.size"
-                            class="v-btn--round"
-                        />
+                        <a :href="logo.link">
+                            <v-img
+                                :src="logo.src"
+                                :alt="logo.alt"
+                                :height="logo.size"
+                                :width="logo.size"
+                                class="v-btn--round"
+                                v-on:click="handleBackTop"
+                            />
+                        </a>
                     </div>
                 </v-toolbar-title>
             </v-col>
@@ -172,12 +175,22 @@
                 setTimeout(() => {
                     window.history.replaceState('', document.title, window.location.origin + window.location.pathname)
                 }, 5);
-            }
+            },
+
+            handleBackTop() {
+                const $body = document.querySelector('#ptfl-body')
+                $body.scrollTop = 0
+
+                setTimeout(() => {
+                    window.history.replaceState('', document.title, window.location.origin + window.location.pathname)
+                }, 5);
+            },
         },
 
         data: () => ({
             logo: {
                 src: require('@/assets/img/logo.jpg'),
+                link: '#ptfl-body',
                 alt: 'Portfolio logo',
                 size: 100,
             },
