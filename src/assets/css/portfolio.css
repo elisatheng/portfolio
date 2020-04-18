@@ -55,11 +55,11 @@
 }
 
 .ptfl-banner__title {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
 }
 
 .ptfl-banner__subtitle {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
 }
 
 /* AboutMe */
@@ -75,13 +75,14 @@
 }
 
 .ptfl-course__timeline-title {
+    font-size: 1.05rem;
     word-break: initial;
 }
 
 /* Projects */
 
 .ptfl-projects__card-head {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .ptfl-projects__card-img {
