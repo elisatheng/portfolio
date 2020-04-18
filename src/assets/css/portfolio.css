@@ -1,6 +1,11 @@
 /* AppHeader
 ----------------------------- */
 
+.ptfl-header__navleft {
+    display: grid;
+    align-items: center;
+}
+
 .ptfl-header__logo--bg {
     background-color: #fff;
     border-bottom: 2px solid #999;

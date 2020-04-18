@@ -12,7 +12,10 @@
         </v-row>
         <v-row>
             <v-col cols="12" class="pftl-card__content pa-0">
-                <v-timeline>
+                <v-timeline
+                    align-top
+                    dense
+                >
                     <v-timeline-item
                         v-for="(line, i) in timelines"
                         :key="i"
@@ -21,13 +24,13 @@
                         right
                         color="grey darken-2"
                     >
-                        <template v-slot:opposite>
-                            <p
+                        <template>
+                            <span
                                 v-for="info in line.infos"
                                 :key="info"
                             >
                                 {{ info }}
-                            </p>
+                            </span>
                         </template>
                         <v-card class="elevation-2">
                             <v-card-title class="ptfl-course__timeline-title ptfl--font-righteous">
@@ -62,10 +65,9 @@
                         'course Multilingual Digital Processing',
                     infos: {
                         date: '2013 September - 2016 June',
-                        place: 'Paris XIIIe',
                     },
                     texts: {
-                        place: 'INALCO, Langues O\'',
+                        place: 'INALCO, Langues O\' (Paris XIIIe)',
                     },
                 },
                 {
@@ -73,22 +75,20 @@
                     title: 'Title of web integrator / developer',
                     infos: {
                         date: '2016 November - 2018 September',
-                        place: 'Paris IIIe',
                     },
                     texts: {
-                        place: 'Web@cademie (by Epitech)',
+                        place: 'Web@cademie - Ambition Féminine (by Epitech) (Paris IIIe)',
                     },
                 },
                 {
                     icon: 'mdi-briefcase',
                     title: 'Junior web developer',
                     infos: {
-                        type: '[apprenticeship contract]',
                         date: '2017 September - 2018 September',
-                        place: 'Paris IIIe',
+                        type: '[apprenticeship contract]',
                     },
                     texts: {
-                        place: 'IONIS Education Group',
+                        place: 'IONIS Education Group (Paris IIIe)',
                         technos: 'WordPress / plugin WordPress / AngularJS / Salesforce / C# / ASP.NET MVC',
                     },
                 },
@@ -96,12 +96,11 @@
                     icon: 'mdi-briefcase',
                     title: 'Symfony PHP developer',
                     infos: {
-                        type: '[permanent contract]',
                         date: '2018 December - 2019 June',
-                        place: 'Paris XVe',
+                        type: '[permanent contract]',
                     },
                     texts: {
-                        place: 'ALIECOM',
+                        place: 'ALIECOM (Paris XVe)',
                         technos: 'Symfony / PHP / Bootstrap / jQuery / plugin WordPress',
                     },
                 },
@@ -109,12 +108,11 @@
                     icon: 'mdi-briefcase',
                     title: 'Back-end developer',
                     infos: {
-                        type: '[permanent contract]',
                         date: '2019 October - Now',
-                        place: 'Paris IIe',
+                        type: '[permanent contract]',
                     },
                     texts: {
-                        place: 'Meero',
+                        place: 'Meero (Paris IIe)',
                         technos: 'Symfony / PHP / CSS / JavaScript / ElasticSearch',
                     },
                 },

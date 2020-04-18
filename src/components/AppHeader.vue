@@ -9,10 +9,10 @@
     >
         <v-row class="ptfl--height-full ml-n7">
             <v-col class="ptfl-header__navleft ptfl--height-full pa-0 text-left">
-                <v-list class="d-flex ptfl--height-full pa-0">
+                <v-toolbar-items class="hidden-sm-and-down">
                     <v-list-item
-                        v-for="(item, i) in navleftItems"
-                        :key="i"
+                        v-for="item in navleftItems"
+                        :key="item.id"
                         class="d-flex align-self-end pa-0"
                     >
                         <v-list-item-content class="pa-0">
@@ -25,9 +25,76 @@
                             </a>
                         </v-list-item-content>
                     </v-list-item>
-                </v-list>
+                </v-toolbar-items>
+
+                <!-- MOBILE -->
+                <v-menu
+                    bottom
+                    transition="scale-transition"
+                    offset-y
+                    class="hidden-md-and-up"
+                >
+                    <template v-slot:activator="{ on }">
+                        <v-app-bar-nav-icon
+                            v-on="on"
+                            class="ptfl-header__nav-mobile-icon hidden-md-and-up"
+                        ></v-app-bar-nav-icon>
+                    </template>
+                    <v-list>
+                        <v-list-item
+                            v-for="item in navleftItems"
+                            :key="item.id"
+                        >
+                            <v-list-item-content class="pa-0 text-center">
+                                <a
+                                    :href="item.href"
+                                    class="ptfl-header__nav-link"
+                                    v-on:click="handleNavigation"
+                                >
+                                    {{ item.title }}
+                                </a>
+                            </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item
+                            v-for="item in navrightItems"
+                            :key="item.id"
+                        >
+                            <v-list-item-content class="pa-0 text-center">
+                                <a
+                                    :href="item.href"
+                                    class="ptfl-header__nav-link"
+                                    v-on:click="handleNavigation"
+                                >
+                                    {{ item.title }}
+                                </a>
+                            </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item class="justify-center">
+                            <v-list>
+                                <v-list-item
+                                    v-for="item in socials"
+                                    :key="item.id"
+                                >
+                                    <v-list-item-content class="pa-0">
+                                        <a target="_blank" :href="item.href" class="ptfl-header__nav-link">
+                                            <v-img
+                                                :src="item.img.src"
+                                                :alt="item.img.alt"
+                                                :height="item.img.size"
+                                                :width="item.img.size"
+                                                class="ptfl-header__nav-img v-btn--round"
+                                            />
+                                        </a>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-list>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
+                <!-- MOBILE -->
+
             </v-col>
-            <v-col cols="2" class="ptfl-header__logo pa-0">
+            <v-col cols="5" md="2" class="ptfl-header__logo pa-0">
                 <v-toolbar-title class="ptfl--height-full pa-0">
                     <div class="ptfl-header__logo--bg">
                         <v-img
@@ -41,10 +108,10 @@
                 </v-toolbar-title>
             </v-col>
             <v-col class="ptfl-header__navright ptfl--height-full pa-0 text-right">
-                <v-list class="d-flex ptfl--height-full pa-0">
+                <v-toolbar-items class="hidden-sm-and-down">
                     <v-list-item
-                        v-for="(item, i) in navrightItems"
-                        :key="i"
+                        v-for="item in navrightItems"
+                        :key="item.id"
                         class="d-flex align-self-end pa-0"
                     >
                         <v-list-item-content class="pa-0">
@@ -58,10 +125,10 @@
                         </v-list-item-content>
                     </v-list-item>
                     <v-list-item class="d-flex align-self-end pa-0">
-                        <v-list class="nav-socials d-flex ml-auto pa-0">
+                        <v-list class="d-flex ml-auto pa-0">
                             <v-list-item
-                                v-for="(item, i) in socials"
-                                :key="i"
+                                v-for="item in socials"
+                                :key="item.id"
                                 class="d-flex align-self-end px-1"
                             >
                                 <v-list-item-content class="pa-0">
@@ -78,7 +145,7 @@
                             </v-list-item>
                         </v-list>
                     </v-list-item>
-                </v-list>
+                </v-toolbar-items>
             </v-col>
         </v-row>
     </v-app-bar>
