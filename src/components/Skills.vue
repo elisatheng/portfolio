@@ -14,8 +14,8 @@
             <v-col cols="12" class="ptfl-card__content pa-0">
                 <v-row justify="space-around" class="text-center">
                     <flip-card
-                        v-for="(skill, i) in skills"
-                        :key="i"
+                        v-for="skill in skills"
+                        :key="skill.id"
                         :frontData="skill.front"
                         :backData="skill.back"
                         class="ptfl-skills__flip-card mb-3 ptfl--font-righteous"

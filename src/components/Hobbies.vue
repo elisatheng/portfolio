@@ -14,8 +14,8 @@
             <v-col cols="12" class="ptfl-card__content pa-0">
                 <v-row justify="space-around" class="text-center">
                     <v-col
-                        v-for="(hobby, i) in hobbies"
-                        :key="i"
+                        v-for="hobby in hobbies"
+                        :key="hobby.id"
                         class="pa-0"
                     >
                         <v-avatar size="80" class="mb-3">

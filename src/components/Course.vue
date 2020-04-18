@@ -17,8 +17,8 @@
                     dense
                 >
                     <v-timeline-item
-                        v-for="(line, i) in timelines"
-                        :key="i"
+                        v-for="line in timelines"
+                        :key="line.id"
                         :icon="line.icon"
                         large
                         right
