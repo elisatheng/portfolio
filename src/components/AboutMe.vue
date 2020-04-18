@@ -1,7 +1,7 @@
 <template>
     <v-card class="ptfl-aboutme ptfl-card black white--text" id="aboutme">
         <v-row>
-            <v-col cols="6" class="ptfl-aboutme__profile">
+            <v-col cols="12" md="6" class="ptfl-aboutme__profile">
                 <v-img
                     :src="profile.src"
                     :height="profile.size"
@@ -9,8 +9,8 @@
                     class="ptfl-border--round mx-auto"
                 ></v-img>
             </v-col>
-            <v-col cols="6" class="ptfl-aboutme__content">
-                <div class="ptfl-card__head">
+            <v-col cols="12" md="6" class="ptfl-aboutme__content">
+                <div class="ptfl-card__head text-md-left text-center">
                     <h3 class="ptfl-card__head-title">{{ title }}</h3>
                     <div class="three-dots">
                         <v-icon size="8" color="white">mdi-circle</v-icon>

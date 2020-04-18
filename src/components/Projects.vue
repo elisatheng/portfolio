@@ -37,7 +37,7 @@
                                 </v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-dialog width="75%">
+                        <v-dialog>
                             <template v-slot:activator="{ on }">
                                 <v-img
                                     v-on="on"
