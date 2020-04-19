@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+.row {
+    margin: initial;
+}
+.row, .col:not(.col-height-init) {
+    height: 100%;
+}
+
+.pfl--font-righteous {
+    font-family: 'Righteous', cursive !important;
+}
+
+.pfl-card {
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    z-index: 2;
+}
+
+.pfl-card, .pfl-px {
+    padding-left: 12% !important;
+    padding-right: 12% !important;
+}
+
+.pfl-card, .pfl-py {
+    padding-top: 6% !important;
+    padding-bottom: 6% !important;
+}

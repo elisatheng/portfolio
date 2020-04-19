@@ -1,0 +1,30 @@
+/* AppHeader
+----------------------------- */
+
+.pfl-header__block-logo {
+    background-color: #fff;
+    border-bottom: 2px solid #999;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: .3rem;
+    width: min-content;
+}
+
+.pfl-header__item-link {
+    color: initial !important;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.pfl-header__item-link--active {
+    color: #33cccc !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.pfl-header__social-img {
+    border: 2px solid #fff;
+}
+
+.pfl-header__social-img:hover {
+    border: none;
+}
