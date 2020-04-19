@@ -28,3 +28,34 @@
 .pfl-header__social-img:hover {
     border: none;
 }
+
+/* AppBody
+----------------------------- */
+
+#pfl-body {
+    position: relative;
+    z-index: 0;
+    scroll-behavior: smooth;
+}
+
+.pfl-container {
+    max-width: 100% !important;
+}
+
+/* Banner */
+
+.pfl-banner .v-parallax__image-container {
+    position: fixed !important;
+}
+
+.pfl-banner {
+    width: inherit;
+}
+
+.pfl-banner__title {
+    font-size: 3.5rem;
+}
+
+.pfl-banner__subtitle {
+    font-size: 2.5rem;
+}
