@@ -10,6 +10,7 @@
             >
                 <v-container class="pfl-container fill-height pa-0 mt-15">
                     <banner/>
+                    <about-me/>
                 </v-container>
             </v-sheet>
         </v-card>

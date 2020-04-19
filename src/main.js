@@ -6,6 +6,7 @@ import vuetify from './plugins/vuetify'
 // components
 import AppHeader from './components/AppHeader'
 import Banner from './components/Banner'
+import AboutMe from './components/AboutMe'
 
 import './assets/css/styles.css'
 import './assets/css/components.css'
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 
 Vue.component('app-header', AppHeader)
 Vue.component('banner', Banner)
+Vue.component('about-me', AboutMe)
 
 new Vue({
     vuetify,

@@ -27,3 +27,19 @@
     padding-top: 6% !important;
     padding-bottom: 6% !important;
 }
+
+.pfl-card__head {
+    margin-bottom: 2.5rem;
+}
+
+.pfl-card__head-title {
+    color: #33cccc;
+    font-family: 'Righteous', cursive !important;
+    font-size: 2rem !important;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.pfl-border--round {
+    border-radius: 50%;
+}
