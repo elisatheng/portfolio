@@ -12,6 +12,38 @@
         </v-row>
         <v-row>
             <v-col cols="12">
+                <div class="text-center">
+                    <v-btn
+                        fab
+                        small
+                        color="grey darken-1"
+                        data-filter-type="all"
+                        class="pfl-course__btn-filter mx-2"
+                        @click="filterCourse('all')"
+                    >
+                        <v-icon color="white">mdi-circle</v-icon>
+                    </v-btn>
+                    <v-btn
+                        fab
+                        small
+                        color="black"
+                        data-filter-type="school"
+                        class="pfl-course__btn-filter mx-2"
+                        @click="filterCourse('school')"
+                    >
+                        <v-icon color="white">mdi-school</v-icon>
+                    </v-btn>
+                    <v-btn
+                        fab
+                        small
+                        color="black"
+                        data-filter-type="work"
+                        class="pfl-course__btn-filter mx-2"
+                        @click="filterCourse('work')"
+                    >
+                        <v-icon color="white">mdi-briefcase</v-icon>
+                    </v-btn>
+                </div>
                 <v-timeline align-top dense>
                     <v-timeline-item
                         v-for="line in timelines"
@@ -20,6 +52,8 @@
                         large
                         right
                         color="grey darken-1"
+                        :data-course-type="line.type"
+                        class="pfl-course__item"
                     >
                         <template>
                             <span v-for="info in line.infos" :key="info" class="pfl-course__timeline-info">
