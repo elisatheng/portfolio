@@ -65,3 +65,22 @@
 .pfl-aboutme__description {
     line-height: 1.8rem;
 }
+
+/* Course */
+
+.pfl-course .v-timeline-item__opposite {
+    line-height: initial;
+}
+
+.pfl-course__timeline-info {
+    font-size: 0.8rem;
+}
+
+.pfl-course__timeline-title {
+    font-size: 1.2rem;
+}
+
+.pfl-course__timeline-text {
+    font-size: 0.8rem;
+    line-height: 0.6rem;
+}
