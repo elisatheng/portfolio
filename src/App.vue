@@ -12,6 +12,7 @@
                     <banner/>
                     <about-me/>
                     <course/>
+                    <skills/>
                 </v-container>
             </v-sheet>
         </v-card>
