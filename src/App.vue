@@ -14,6 +14,7 @@
                     <course/>
                     <projects/>
                     <skills/>
+                    <hobbies/>
                 </v-container>
             </v-sheet>
         </v-card>

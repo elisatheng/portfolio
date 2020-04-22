@@ -114,3 +114,9 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Hobbies */
+
+.pfl-hobbies__card-icon {
+    border: 1px solid #666;
+}

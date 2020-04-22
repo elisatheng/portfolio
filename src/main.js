@@ -10,6 +10,7 @@ import AboutMe from './components/AboutMe'
 import Course from './components/Course'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Hobbies from './components/Hobbies'
 
 import './assets/css/styles.css'
 import './assets/css/components.css'
@@ -22,6 +23,7 @@ Vue.component('about-me', AboutMe)
 Vue.component('course', Course)
 Vue.component('projects', Projects)
 Vue.component('skills', Skills)
+Vue.component('hobbies', Hobbies)
 
 new Vue({
     vuetify,
