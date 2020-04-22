@@ -11,6 +11,7 @@ import Course from './components/Course'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Hobbies from './components/Hobbies'
+import AppFooter from './components/AppFooter'
 
 import './assets/css/styles.css'
 import './assets/css/components.css'
@@ -24,6 +25,7 @@ Vue.component('course', Course)
 Vue.component('projects', Projects)
 Vue.component('skills', Skills)
 Vue.component('hobbies', Hobbies)
+Vue.component('app-footer', AppFooter)
 
 new Vue({
     vuetify,

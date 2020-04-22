@@ -15,6 +15,7 @@
                     <projects/>
                     <skills/>
                     <hobbies/>
+                    <app-footer/>
                 </v-container>
             </v-sheet>
         </v-card>
