@@ -14,6 +14,7 @@
                         v-for="item in navleftItems"
                         :key="item.id"
                         class="d-flex align-self-end"
+                        v-on:click="initUri"
                     >
                         <v-list-item-content class="d-flex align-self-end pa-0">
                             <a :href="item.href" class="pfl-header__item-link">
@@ -33,6 +34,7 @@
                                 :height="logo.size"
                                 :width="logo.size"
                                 class="v-btn--round"
+                                v-on:click="handleBackTop"
                             />
                         </a>
                     </div>
@@ -44,6 +46,7 @@
                         v-for="item in navrightItems"
                         :key="item.id"
                         class="d-flex align-self-end"
+                        v-on:click="initUri"
                     >
                         <v-list-item-content class="d-flex align-self-end pa-0">
                             <a :href="item.href" class="pfl-header__item-link">

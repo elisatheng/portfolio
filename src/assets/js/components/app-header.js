@@ -1,6 +1,19 @@
 export default {
     name: 'AppHeader',
 
+    methods: {
+        initUri() {
+            setTimeout(() => {
+                window.history.replaceState('', document.title, window.location.origin + window.location.pathname)
+            }, 5);
+        },
+
+        handleBackTop() {
+            this.initUri()
+            document.querySelector('#pfl-body').scrollTop = 0
+        },
+    },
+
     data: () => ({
         logo: {
             src: require('@/assets/img/logo.jpg'),
