@@ -85,6 +85,24 @@
     line-height: 0.6rem;
 }
 
+/* Projects */
+
+.pfl-projects__card-head {
+    font-size: 1.2rem;
+}
+
+.pfl-projects__card-img {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: filter .3s ease-in-out;
+}
+
+.pfl-projects__card:hover .pfl-projects__card-img {
+    filter: grayscale(0);
+}
+
 /* Skills */
 
 .flipper .front {

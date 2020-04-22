@@ -8,6 +8,7 @@ import AppHeader from './components/AppHeader'
 import Banner from './components/Banner'
 import AboutMe from './components/AboutMe'
 import Course from './components/Course'
+import Projects from './components/Projects'
 import Skills from './components/Skills'
 
 import './assets/css/styles.css'
@@ -19,6 +20,7 @@ Vue.component('app-header', AppHeader)
 Vue.component('banner', Banner)
 Vue.component('about-me', AboutMe)
 Vue.component('course', Course)
+Vue.component('projects', Projects)
 Vue.component('skills', Skills)
 
 new Vue({
