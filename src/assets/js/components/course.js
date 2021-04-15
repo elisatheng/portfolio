@@ -43,7 +43,7 @@ export default {
                 icon: 'mdi-briefcase',
                 title: 'Développeuse back-end',
                 infos: {
-                    date: 'Octobre 2019 - Aujourd\'hui',
+                    date: 'Octobre 2019 - Janvier 2021',
                     type: '[CDI]',
                 },
                 texts: {
