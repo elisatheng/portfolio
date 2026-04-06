@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-card>
+        <v-card flat>
             <app-header/>
 
             <v-sheet
@@ -9,13 +9,13 @@
                 class="overflow-y-auto overflow-x-hidden"
                 v-on:scroll="handleNavigationScroll"
             >
-                <v-container class="pfl-container fill-height pa-0 mt-15">
-                    <banner/>
+                <v-container class="pfl-container fill-height pa-0">
                     <about-me/>
+                    <skills/>
                     <course/>
                     <projects/>
-                    <skills/>
                     <hobbies/>
+                    <contact/>
                     <app-footer/>
                 </v-container>
             </v-sheet>

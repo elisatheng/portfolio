@@ -1,7 +1,4 @@
 import logoImg from '@/assets/img/logo.jpg'
-import githubImg from '@/assets/img/socials/github.png'
-import linkedinImg from '@/assets/img/socials/linkedin.png'
-import viadeoImg from '@/assets/img/socials/viadeo.png'
 
 export default {
     name: 'AppHeader',
@@ -20,11 +17,12 @@ export default {
     },
 
     data: () => ({
+        mobileMenu: false,
         logo: {
             src: logoImg,
             link: '#pfl-body',
             alt: 'Portfolio logo',
-            size: 100,
+            size: 60,
         },
         navleftItems: [
             {
@@ -32,48 +30,26 @@ export default {
                 href: '#aboutme',
             },
             {
-                title: 'Parcours',
-                href: '#course',
+                title: 'Compétences',
+                href: '#skills',
             },
             {
-                title: 'Projets',
-                href: '#projects',
+                title: 'Parcours',
+                href: '#course',
             },
         ],
         navrightItems: [
             {
-                title: 'Compétences',
-                href: '#skills',
+                title: 'Projets',
+                href: '#projects',
             },
             {
                 title: 'Loisirs',
                 href: '#hobbies',
             },
-        ],
-        socials: [
             {
-                href: 'https://github.com/elisatheng',
-                img: {
-                    src: githubImg,
-                    alt: 'Github logo',
-                    size: 35,
-                },
-            },
-            {
-                href: 'https://www.linkedin.com/in/elisa-theng/',
-                img: {
-                    src: linkedinImg,
-                    alt: 'LinkedIn logo',
-                    size: 35,
-                },
-            },
-            {
-                href: 'http://www.viadeo.com/fr/profile/elisatheng',
-                img: {
-                    src: viadeoImg,
-                    alt: 'Viadeo logo',
-                    size: 35,
-                },
+                title: 'Contact',
+                href: '#contact',
             },
         ],
     }),

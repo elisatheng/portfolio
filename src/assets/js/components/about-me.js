@@ -1,4 +1,4 @@
-import profileImg from '@/assets/img/profile.png'
+import profileImg from '@/assets/img/profile.jpg'
 
 export default {
     name: 'AboutMe',
@@ -6,10 +6,11 @@ export default {
     data: () => ({
         profile: {
             src: profileImg,
-            alt: 'Profile image',
-            size: 250,
+            alt: 'Photo Elisa Theng',
+            size: 330,
         },
-        title: 'À propos de moi',
+        name: 'Elisa THENG',
+        subtitle: 'Développeuse Back-End',
         information: {
             description1: 'Ayant découvert la programmation par hasard durant ma licence, ' +
                 'j\'ai tout de suite trouvé une passion dans la conception de site web.',

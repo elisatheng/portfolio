@@ -1,32 +1,73 @@
 /* AppHeader
 ----------------------------- */
 
+.pfl-header {
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line) !important;
+    padding-left: 3.5vw !important;
+    padding-right: 3.5vw !important;
+}
+
 .pfl-header__block-logo {
-    background-color: #fff;
-    border-bottom: 2px solid #999;
+    border: 2px solid var(--teal);
+    box-shadow: 0 0 0 4px rgba(75, 191, 191, 0.14);
     border-radius: 50%;
-    margin: 0 auto;
-    padding: .3rem;
+    margin: 0 2rem;
+    padding: 0;
     width: min-content;
+    overflow: hidden;
 }
 
 .pfl-header__item-link {
-    color: initial !important;
-    font-size: 1.2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light) !important;
     text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
 }
 
+.pfl-header__item-link:hover,
 .pfl-header__item-link--active {
-    color: #33cccc !important;
-    transition: all 0.3s ease-in-out;
+    color: var(--teal) !important;
 }
 
-.pfl-header__social-img {
-    border: 2px solid #fff;
+.pfl-header__mobile-row {
+    height: 100%;
+    align-items: center !important;
+    margin-top: -3px;
 }
 
-.pfl-header__social-img:hover {
-    border: none;
+.pfl-header__mobile-menu {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(250, 250, 250, 0.97);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+}
+
+.pfl-header__mobile-menu-link {
+    font-family: inherit;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pfl-header__mobile-menu-link:hover {
+    color: var(--teal);
 }
 
 /* AppBody
@@ -42,88 +83,374 @@
     max-width: 100% !important;
 }
 
-/* Banner */
-
-.pfl-banner .v-parallax__image-container {
-    position: fixed !important;
-}
-
-.pfl-banner {
-    width: inherit;
-}
-
-.pfl-banner__title {
-    font-size: 3.5rem;
-}
-
-.pfl-banner__subtitle {
-    font-size: 2.5rem;
-}
-
 /* AboutMe */
 
+.pfl-aboutme {
+    background: var(--white) !important;
+    position: relative !important;
+    overflow: visible !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.pfl-aboutme .pfl-border--round {
+    border: 3px solid var(--teal);
+    box-shadow: 0 12px 48px rgba(75, 191, 191, 0.22), 0 0 0 8px rgba(75, 191, 191, 0.07);
+}
+
+.pfl-aboutme__name {
+    font-size: clamp(1.8rem, 4.2vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+}
+
+.pfl-aboutme__subtitle {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 2rem;
+}
+
 .pfl-aboutme__description {
-    line-height: 1.8rem;
+    line-height: 1.85;
+}
+
+.pfl-aboutme__description p {
+    font-size: 1.1rem;
+    color: var(--ink-mid);
+    font-weight: 300;
+    margin-bottom: 1.1rem;
+}
+
+/* Scroll hint */
+
+.pfl-scroll-hint__label {
+    font-size: 0.91rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.5rem;
+}
+
+.pfl-scroll-line {
+    width: 1px;
+    height: 2.4rem;
+    background: var(--teal);
+    animation: pfl-scroll-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pfl-scroll-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+/* Skills */
+
+.pfl-skills {
+    background: var(--teal) !important;
+}
+
+.flipper .front,
+.pfl-skill-circle {
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-align: center;
+    line-height: 1.35;
+}
+
+.flipper .front {
+    height: 100%;
+    width: 100%;
+}
+
+.pfl-skill-circle {
+    width: 120px;
+    height: 120px;
+    padding: 0 10px;
 }
 
 /* Course */
 
-.pfl-course .v-timeline-item__opposite {
-    line-height: initial;
+.pfl-course {
+    background: var(--cream) !important;
+}
+
+.pfl-course .v-timeline-item .v-timeline-item__body {
+    width: 750px !important;
+    min-width: 750px !important;
+    max-width: 750px !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+@media (max-width: 1600px) and (min-width: 961px) {
+    .pfl-course .v-timeline-item .v-timeline-item__body {
+        width: 35vw !important;
+        min-width: 35vw !important;
+        max-width: 35vw !important;
+    }
+}
+
+.pfl-course__timeline-card {
+    padding: 30px;
+}
+
+.pfl-course__timeline-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
 }
 
 .pfl-course__timeline-info {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 500;
+}
+
+.pfl-course__timeline-duration {
+    color: var(--ink-light);
+}
+
+.pfl-course__timeline-contract {
+    display: inline-block;
+    font-size: 0.61rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--teal-pale);
+    color: var(--teal-dark);
+    padding: 0.12rem 0.55rem;
+    font-weight: 500;
 }
 
 .pfl-course__timeline-title {
-    font-size: 1.2rem;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--ink);
+    line-height: 1.3;
+    white-space: pre-line !important;
+}
+
+.pfl-course__timeline-place {
+    font-size: 1.11rem;
+    color: var(--ink);
+    line-height: 1.5;
 }
 
 .pfl-course__timeline-text {
-    font-size: 0.8rem;
-    line-height: 0.6rem;
+    font-size: 0.92rem;
+    color: var(--ink-light);
+    font-style: normal;
+    line-height: 1.5;
 }
 
 /* Projects */
 
+.pfl-projects {
+    background: var(--white) !important;
+}
+
+.pfl-projects__card {
+    border: 1px solid var(--line) !important;
+}
+
 .pfl-projects__card-head {
     font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
 }
 
 .pfl-projects__card-img {
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
     cursor: pointer;
     filter: grayscale(1);
-    transition: filter .3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
 }
 
 .pfl-projects__card:hover .pfl-projects__card-img {
     filter: grayscale(0);
 }
 
-/* Skills */
-
-.flipper .front {
-    background-color: #000000;
-    border-radius: 50%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Hobbies */
 
+.pfl-hobbies {
+    background: var(--cream) !important;
+}
+
 .pfl-hobbies__card-icon {
-    border: 1px solid #666;
+    color: var(--teal) !important;
+}
+
+/* Contact */
+
+.pfl-contact {
+    background: var(--ink) !important;
+    padding-top: 5.5rem !important;
+    padding-bottom: 5.5rem !important;
+}
+
+.pfl-contact__title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.8rem, 4.2vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 0.7rem;
+}
+
+.pfl-contact__link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 1.11rem;
+    letter-spacing: 0.08em;
+    transition: all 0.25s;
+}
+
+.pfl-contact__link:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 /* AppFooter */
 
 .pfl-footer {
-    font-size: small;
+    background: var(--ink) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
     width: 100%;
+    padding-top: 1.8rem !important;
+    padding-bottom: 1.8rem !important;
+}
+
+.pfl-footer p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+    /* Header */
+    .pfl-header__item-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+    }
+
+    .pfl-header__block-logo {
+        margin: 0 1rem;
+    }
+
+    /* AboutMe */
+    .pfl-aboutme {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .pfl-aboutme__photo {
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: -1.5rem;
+    }
+
+    /* Skills */
+    .flipper, .pfl-skill-circle {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .flipper .front, .pfl-skill-circle {
+        font-size: 0.78rem;
+    }
+
+    /* Course */
+    .pfl-course .v-timeline-item .v-timeline-item__body {
+        width: 95% !important;
+        min-width: 95% !important;
+        max-width: 95% !important;
+    }
+
+    /* Projects */
+    .pfl-projects__card {
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    /* AboutMe */
+    .pfl-aboutme {
+        padding-top: 4rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .pfl-aboutme__description p {
+        font-size: 0.95rem;
+    }
+
+    /* Skills */
+    .flipper, .pfl-skill-circle {
+        width: 85px !important;
+        height: 85px !important;
+    }
+
+    .flipper .front, .pfl-skill-circle {
+        font-size: 0.68rem;
+    }
+
+    .pfl-course__timeline-title {
+        font-size: 1rem !important;
+    }
+
+    .pfl-course__timeline-place {
+        font-size: 0.9rem;
+    }
+
+    /* Projects */
+    .pfl-projects__card {
+        width: 100% !important;
+    }
+
+    /* Hobbies */
+    .pfl-hobbies .v-col {
+        min-width: 50%;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Contact */
+    .pfl-contact {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .pfl-contact__link {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.2rem;
+    }
 }

@@ -8,7 +8,7 @@ export default {
     name: 'Projects',
 
     data: () => ({
-        title: 'Mes projets',
+        title: 'Projets',
         projects: [
             {
                 title: 'Sprite Generator CLI',

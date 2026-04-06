@@ -2,7 +2,7 @@ export default {
     name: 'Hobbies',
 
     data: () => ({
-        title: 'Mes loisirs',
+        title: 'Loisirs',
         hobbies: [
             {
                 icon: 'mdi-human-handsup',

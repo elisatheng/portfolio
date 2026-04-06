@@ -1,73 +1,39 @@
 <template>
-    <v-card color="red" class="pfl-course pfl-card text-white" id="course">
+    <v-card flat class="pfl-course pfl-card" id="course">
         <v-row>
             <v-col cols="12" class="pfl-card__head text-center">
                 <h3 class="pfl-card__head-title">{{ title }}</h3>
-                <div>
-                    <v-icon size="8" color="white">mdi-circle</v-icon>
-                    <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
-                    <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
-                </div>
             </v-col>
         </v-row>
-        <v-row>
+        <v-row justify="center">
             <v-col cols="12">
-                <div class="text-center">
-                    <v-btn
-                        icon
-                        size="small"
-                        variant="flat"
-                        color="grey-darken-1"
-                        data-filter-type="all"
-                        class="pfl-course__btn-filter mx-2"
-                        @click="filterCourse('all')"
-                    >
-                        <v-icon color="white">mdi-circle</v-icon>
-                    </v-btn>
-                    <v-btn
-                        icon
-                        size="small"
-                        variant="flat"
-                        color="black"
-                        data-filter-type="school"
-                        class="pfl-course__btn-filter mx-2"
-                        @click="filterCourse('school')"
-                    >
-                        <v-icon color="white">mdi-school</v-icon>
-                    </v-btn>
-                    <v-btn
-                        icon
-                        size="small"
-                        variant="flat"
-                        color="black"
-                        data-filter-type="work"
-                        class="pfl-course__btn-filter mx-2"
-                        @click="filterCourse('work')"
-                    >
-                        <v-icon color="white">mdi-briefcase</v-icon>
-                    </v-btn>
-                </div>
-                <v-timeline density="compact" side="end">
+                <v-timeline :side="isMobile ? 'end' : undefined">
                     <v-timeline-item
                         v-for="line in timelines"
-                        :key="line.id"
+                        :key="line.title + line.period"
                         :icon="line.icon"
                         size="large"
-                        dot-color="grey-darken-1"
-                        :data-course-type="line.type"
+                        dot-color="#4BBFBF"
                         class="pfl-course__item"
                     >
-                        <template v-slot:opposite>
-                            <span v-for="info in line.infos" :key="info" class="pfl-course__timeline-info">
-                                {{ info }}
-                            </span>
-                        </template>
-                        <v-card class="elevation-2">
-                            <v-card-title class="pfl-course__timeline-title pfl--font-righteous">
+                        <v-card flat class="pfl-course__timeline-card">
+                            <div class="pfl-course__timeline-meta">
+                                <span v-if="line.contract" class="pfl-course__timeline-contract">
+                                    {{ line.contract }}
+                                </span>
+                                <span class="pfl-course__timeline-info">
+                                    {{ line.period }}
+                                    <span v-if="line.duration" class="pfl-course__timeline-duration">({{ line.duration }})</span>
+                                </span>
+                            </div>
+                            <v-card-title class="pfl-course__timeline-title pa-0">
                                 {{ line.title }}
                             </v-card-title>
-                            <v-card-text class="pfl-course__timeline-text">
-                                <p v-for="text in line.texts" :key="text">
+                            <div v-if="line.place" class="pfl-course__timeline-place mt-2">
+                                {{ line.place }}
+                            </div>
+                            <v-card-text class="pfl-course__timeline-text pa-0 mt-1">
+                                <p v-for="text in line.texts" :key="text" class="mb-1">
                                     {{ text }}
                                 </p>
                             </v-card-text>

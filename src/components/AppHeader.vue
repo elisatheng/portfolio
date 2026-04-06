@@ -2,76 +2,84 @@
     <v-app-bar
         absolute
         color="white"
-        scroll-behavior="collapse"
         scroll-target="#pfl-body"
-        class="pfl-header pfl-px pfl--font-righteous"
+        class="pfl-header"
+        flat
+        height="90"
     >
-        <v-row>
-            <v-col class="text-left px-0">
-                <v-toolbar-items>
-                    <v-list-item
-                        v-for="item in navleftItems"
-                        :key="item.id"
-                        class="d-flex align-self-end"
-                        @click="initUri"
-                    >
-                        <a :href="item.href" class="pfl-header__item-link">
-                            {{ item.title }}
-                        </a>
-                    </v-list-item>
-                </v-toolbar-items>
+        <!-- Desktop nav -->
+        <v-row align="center" class="flex-nowrap d-none d-md-flex" style="max-width: 100%;">
+            <v-col class="d-flex justify-end align-center ga-8 px-0">
+                <a
+                    v-for="item in navleftItems"
+                    :key="item.title"
+                    :href="item.href"
+                    class="pfl-header__item-link"
+                    @click="initUri"
+                >
+                    {{ item.title }}
+                </a>
             </v-col>
-            <v-col cols="5" md="2" class="pa-0">
-                <v-toolbar-title class="fill-height pa-0">
-                    <div class="pfl-header__block-logo">
-                        <a :href="logo.link">
-                            <v-img
-                                :src="logo.src"
-                                :alt="logo.alt"
-                                :height="logo.size"
-                                :width="logo.size"
-                                class="rounded-circle"
-                                @click="handleBackTop"
-                            />
-                        </a>
-                    </div>
-                </v-toolbar-title>
+            <v-col cols="auto" class="pa-0">
+                <div class="pfl-header__block-logo">
+                    <a :href="logo.link" @click.prevent="handleBackTop">
+                        <v-img
+                            :src="logo.src"
+                            :alt="logo.alt"
+                            :height="logo.size"
+                            :width="logo.size"
+                        />
+                    </a>
+                </div>
             </v-col>
-            <v-col class="text-right px-0">
-                <v-toolbar-items>
-                    <v-list-item
-                        v-for="item in navrightItems"
-                        :key="item.id"
-                        class="d-flex align-self-end"
-                        @click="initUri"
-                    >
-                        <a :href="item.href" class="pfl-header__item-link">
-                            {{ item.title }}
-                        </a>
-                    </v-list-item>
-                    <v-list-item class="d-flex align-self-end mb-n1 pr-0">
-                        <v-list class="d-flex pa-0">
-                            <v-list-item
-                                v-for="item in socials"
-                                :key="item.id"
-                                class="d-flex align-self-end px-1"
-                            >
-                                <a target="_blank" :href="item.href" class="pfl-header__item-link">
-                                    <v-img
-                                        :src="item.img.src"
-                                        :alt="item.img.alt"
-                                        :height="item.img.size"
-                                        :width="item.img.size"
-                                        class="pfl-header__social-img rounded-circle"
-                                    />
-                                </a>
-                            </v-list-item>
-                        </v-list>
-                    </v-list-item>
-                </v-toolbar-items>
+            <v-col class="d-flex justify-start align-center ga-8 px-0">
+                <a
+                    v-for="item in navrightItems"
+                    :key="item.title"
+                    :href="item.href"
+                    class="pfl-header__item-link"
+                    @click="initUri"
+                >
+                    {{ item.title }}
+                </a>
+            </v-col>
+        </v-row>
+
+        <!-- Mobile nav -->
+        <v-row align="center" class="flex-nowrap d-flex d-md-none pfl-header__mobile-row" style="max-width: 100%;">
+            <v-col class="px-0"></v-col>
+            <v-col cols="auto" class="pa-0">
+                <div class="pfl-header__block-logo">
+                    <a :href="logo.link" @click.prevent="handleBackTop">
+                        <v-img
+                            :src="logo.src"
+                            :alt="logo.alt"
+                            :height="logo.size"
+                            :width="logo.size"
+                        />
+                    </a>
+                </div>
+            </v-col>
+            <v-col class="d-flex justify-end px-0">
+                <v-btn icon variant="text" @click="mobileMenu = !mobileMenu">
+                    <v-icon>{{ mobileMenu ? 'mdi-close' : 'mdi-menu' }}</v-icon>
+                </v-btn>
             </v-col>
         </v-row>
     </v-app-bar>
+
+    <!-- Mobile menu drawer -->
+    <div v-if="mobileMenu" class="pfl-header__mobile-menu d-md-none">
+        <a
+            v-for="item in [...navleftItems, ...navrightItems]"
+            :key="item.title"
+            :href="item.href"
+            class="pfl-header__mobile-menu-link"
+            @click="mobileMenu = false; initUri()"
+        >
+            {{ item.title }}
+        </a>
+    </div>
 </template>
 
 <script type="text/javascript" src="@/assets/js/components/app-header.js"></script>

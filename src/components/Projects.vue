@@ -1,69 +1,54 @@
 <template>
-    <v-card class="pfl-projects pfl-card" color="white" id="projects">
+    <v-card flat class="pfl-projects pfl-card" id="projects">
         <v-row>
             <v-col cols="12" class="pfl-card__head text-center">
                 <h3 class="pfl-card__head-title">{{ title }}</h3>
-                <div>
-                    <v-icon size="8" color="black">mdi-circle</v-icon>
-                    <v-icon size="8" color="black" class="ml-1">mdi-circle</v-icon>
-                    <v-icon size="8" color="black" class="ml-1">mdi-circle</v-icon>
-                </div>
             </v-col>
         </v-row>
-        <v-row>
+        <v-row justify="center">
             <v-col cols="12">
-                <v-sheet elevation="4">
-                    <v-slide-group
-                        show-arrows
-                        center-active
+                <div class="d-flex flex-wrap justify-center">
+                    <v-card
+                        v-for="project in projects"
+                        :key="project.title"
+                        width="320"
+                        class="pfl-projects__card ma-4 text-center"
                     >
-                        <v-slide-group-item
-                            v-for="project in projects"
-                            :key="project.id"
-                            v-slot="{ toggle }"
-                        >
-                            <v-card
-                                width="320"
-                                color="white"
-                                class="pfl-projects__card ma-4 text-center"
-                                @click="toggle"
+                        <v-list-item>
+                            <v-list-item-title class="pfl-projects__card-head pb-0">
+                                {{ project.title }}
+                                <v-btn
+                                    icon
+                                    variant="text"
+                                    :href="project.link"
+                                    target="_blank"
+                                >
+                                    <v-icon>mdi-github</v-icon>
+                                </v-btn>
+                            </v-list-item-title>
+                        </v-list-item>
+                        <v-img
+                            :src="project.img.src"
+                            :alt="project.img.alt"
+                            height="200"
+                            :position="project.img.position"
+                            class="pfl-projects__card-img"
+                        ></v-img>
+                        <v-card-actions class="d-block pt-0">
+                            <v-btn
+                                v-for="techno in project.technos"
+                                :key="techno"
+                                variant="text"
+                                disabled
+                                size="x-small"
+                                class="px-0"
                             >
-                                <v-list-item>
-                                    <v-list-item-title class="pfl-projects__card-head pfl--font-righteous pb-0">
-                                        {{ project.title }}
-                                        <v-btn
-                                            icon
-                                            :href="project.link"
-                                            target="_blank"
-                                        >
-                                            <v-icon>mdi-github</v-icon>
-                                        </v-btn>
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-img
-                                    :src="project.img.src"
-                                    :alt="project.img.alt"
-                                    height="200"
-                                    :position="project.img.position"
-                                    class="pfl-projects__card-img"
-                                ></v-img>
-                                <v-card-actions class="d-block pt-0">
-                                    <v-btn
-                                        v-for="techno in project.technos"
-                                        :key="techno.id"
-                                        variant="text"
-                                        disabled
-                                        size="x-small"
-                                        class="px-0"
-                                    >
-                                        {{ techno }}
-                                    </v-btn>
-                                </v-card-actions>
-                                <v-card-text>{{ project.description }}</v-card-text>
-                            </v-card>
-                        </v-slide-group-item>
-                    </v-slide-group>
-                </v-sheet>
+                                {{ techno }}
+                            </v-btn>
+                        </v-card-actions>
+                        <v-card-text class="text-left" style="color: var(--ink-mid); font-size: 1.11rem;">{{ project.description }}</v-card-text>
+                    </v-card>
+                </div>
             </v-col>
         </v-row>
     </v-card>
