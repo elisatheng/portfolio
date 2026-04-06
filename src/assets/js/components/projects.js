@@ -1,3 +1,9 @@
+import spriteGeneratorImg from '@/assets/img/projects/sprite-generator-cli.png'
+import pianolatorImg from '@/assets/img/projects/pianolator.png'
+import myArtPaintImg from '@/assets/img/projects/my-art-paint.png'
+import fileIndexerImg from '@/assets/img/projects/file-indexer.png'
+import logoImg from '@/assets/img/logo.jpg'
+
 export default {
     name: 'Projects',
 
@@ -7,7 +13,7 @@ export default {
             {
                 title: 'Sprite Generator CLI',
                 img: {
-                    src: require('@/assets/img/projects/sprite-generator-cli.png'),
+                    src: spriteGeneratorImg,
                     alt: 'Sprite Generator CLI project screenshot',
                     position: 'top left',
                 },
@@ -22,7 +28,7 @@ export default {
             {
                 title: 'Pianolator',
                 img: {
-                    src: require('@/assets/img/projects/pianolator.png'),
+                    src: pianolatorImg,
                     alt: 'Pianolator project screenshot',
                     position: 'top',
                 },
@@ -39,7 +45,7 @@ export default {
             {
                 title: 'My Art Paint',
                 img: {
-                    src: require('@/assets/img/projects/my-art-paint.png'),
+                    src: myArtPaintImg,
                     alt: 'My Art Paint project screenshot',
                     position: 'top left',
                 },
@@ -56,7 +62,7 @@ export default {
             {
                 title: 'File Indexer',
                 img: {
-                    src: require('@/assets/img/projects/file-indexer.png'),
+                    src: fileIndexerImg,
                     alt: 'File Indexer project screenshot',
                     position: 'top right',
                 },
@@ -71,7 +77,7 @@ export default {
             {
                 title: 'Portfolio',
                 img: {
-                    src: require('@/assets/img/logo.jpg'),
+                    src: logoImg,
                     alt: 'Portfolio project screenshot',
                     position: 'center',
                 },

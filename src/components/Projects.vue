@@ -1,12 +1,12 @@
 <template>
-    <v-card class="pfl-projects pfl-card white" id="projects">
+    <v-card class="pfl-projects pfl-card" color="white" id="projects">
         <v-row>
             <v-col cols="12" class="pfl-card__head text-center">
                 <h3 class="pfl-card__head-title">{{ title }}</h3>
                 <div>
                     <v-icon size="8" color="black">mdi-circle</v-icon>
-                    <v-icon size="8" color="black" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="black" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="black" class="ml-1">mdi-circle</v-icon>
+                    <v-icon size="8" color="black" class="ml-1">mdi-circle</v-icon>
                 </div>
             </v-col>
         </v-row>
@@ -17,7 +17,7 @@
                         show-arrows
                         center-active
                     >
-                        <v-slide-item
+                        <v-slide-group-item
                             v-for="project in projects"
                             :key="project.id"
                             v-slot="{ toggle }"
@@ -29,19 +29,16 @@
                                 @click="toggle"
                             >
                                 <v-list-item>
-                                    <v-list-item-content class="pb-0">
-                                        <v-list-item-title class="pfl-projects__card-head pfl--font-righteous">
-                                            {{ project.title }}
-                                            <v-btn
-                                                icon
-                                                link
-                                                :href="project.link"
-                                                target="_blank"
-                                            >
-                                                <v-icon>mdi-github</v-icon>
-                                            </v-btn>
-                                        </v-list-item-title>
-                                    </v-list-item-content>
+                                    <v-list-item-title class="pfl-projects__card-head pfl--font-righteous pb-0">
+                                        {{ project.title }}
+                                        <v-btn
+                                            icon
+                                            :href="project.link"
+                                            target="_blank"
+                                        >
+                                            <v-icon>mdi-github</v-icon>
+                                        </v-btn>
+                                    </v-list-item-title>
                                 </v-list-item>
                                 <v-img
                                     :src="project.img.src"
@@ -54,9 +51,9 @@
                                     <v-btn
                                         v-for="techno in project.technos"
                                         :key="techno.id"
-                                        text
+                                        variant="text"
                                         disabled
-                                        x-small
+                                        size="x-small"
                                         class="px-0"
                                     >
                                         {{ techno }}
@@ -64,7 +61,7 @@
                                 </v-card-actions>
                                 <v-card-text>{{ project.description }}</v-card-text>
                             </v-card>
-                        </v-slide-item>
+                        </v-slide-group-item>
                     </v-slide-group>
                 </v-sheet>
             </v-col>

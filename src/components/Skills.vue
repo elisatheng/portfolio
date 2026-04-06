@@ -1,12 +1,12 @@
 <template>
-    <v-card class="pfl-skills pfl-card grey darken-2 white--text" id="skills">
+    <v-card color="grey-darken-2" class="pfl-skills pfl-card text-white" id="skills">
         <v-row>
             <v-col cols="12" class="pfl-card__head text-center">
                 <h3 class="pfl-card__head-title">{{ title }}</h3>
                 <div>
                     <v-icon size="8" color="white">mdi-circle</v-icon>
-                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
+                    <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
                 </div>
             </v-col>
         </v-row>
@@ -20,10 +20,10 @@
                         width="120px"
                         :active-hover="true"
                     >
-                        <template v-slot:front class="front">
+                        <template v-slot:front>
                             {{ skill.front }}
                         </template>
-                        <template v-slot:back class="back">
+                        <template v-slot:back>
                             <img :src="skill.back.src" :alt="skill.back.alt" width="100%" class="pfl-border--round">
                         </template>
                     </vue-flip>

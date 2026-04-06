@@ -1,12 +1,12 @@
 <template>
-    <v-card class="pfl-hobbies pfl-card teal lighten-3" id="hobbies">
+    <v-card color="teal-lighten-3" class="pfl-hobbies pfl-card" id="hobbies">
         <v-row>
             <v-col cols="12" class="pfl-card__head text-center">
-                <h3 class="pfl-card__head-title white--text">{{ title }}</h3>
+                <h3 class="pfl-card__head-title text-white">{{ title }}</h3>
                 <div>
                     <v-icon size="8" color="black">mdi-circle</v-icon>
-                    <v-icon size="8" color="black" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="black" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="black" class="ml-1">mdi-circle</v-icon>
+                    <v-icon size="8" color="black" class="ml-1">mdi-circle</v-icon>
                 </div>
             </v-col>
         </v-row>

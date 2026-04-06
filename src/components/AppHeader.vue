@@ -2,8 +2,7 @@
     <v-app-bar
         absolute
         color="white"
-        shrink-on-scroll
-        prominent
+        scroll-behavior="collapse"
         scroll-target="#pfl-body"
         class="pfl-header pfl-px pfl--font-righteous"
     >
@@ -14,13 +13,11 @@
                         v-for="item in navleftItems"
                         :key="item.id"
                         class="d-flex align-self-end"
-                        v-on:click="initUri"
+                        @click="initUri"
                     >
-                        <v-list-item-content class="d-flex align-self-end pa-0">
-                            <a :href="item.href" class="pfl-header__item-link">
-                                {{ item.title }}
-                            </a>
-                        </v-list-item-content>
+                        <a :href="item.href" class="pfl-header__item-link">
+                            {{ item.title }}
+                        </a>
                     </v-list-item>
                 </v-toolbar-items>
             </v-col>
@@ -33,8 +30,8 @@
                                 :alt="logo.alt"
                                 :height="logo.size"
                                 :width="logo.size"
-                                class="v-btn--round"
-                                v-on:click="handleBackTop"
+                                class="rounded-circle"
+                                @click="handleBackTop"
                             />
                         </a>
                     </div>
@@ -46,13 +43,11 @@
                         v-for="item in navrightItems"
                         :key="item.id"
                         class="d-flex align-self-end"
-                        v-on:click="initUri"
+                        @click="initUri"
                     >
-                        <v-list-item-content class="d-flex align-self-end pa-0">
-                            <a :href="item.href" class="pfl-header__item-link">
-                                {{ item.title }}
-                            </a>
-                        </v-list-item-content>
+                        <a :href="item.href" class="pfl-header__item-link">
+                            {{ item.title }}
+                        </a>
                     </v-list-item>
                     <v-list-item class="d-flex align-self-end mb-n1 pr-0">
                         <v-list class="d-flex pa-0">
@@ -61,17 +56,15 @@
                                 :key="item.id"
                                 class="d-flex align-self-end px-1"
                             >
-                                <v-list-item-content class="d-flex align-self-end pa-0">
-                                    <a target="_blank" :href="item.href" class="pfl-header__item-link">
-                                        <v-img
-                                            :src="item.img.src"
-                                            :alt="item.img.alt"
-                                            :height="item.img.size"
-                                            :width="item.img.size"
-                                            class="pfl-header__social-img v-btn--round"
-                                        />
-                                    </a>
-                                </v-list-item-content>
+                                <a target="_blank" :href="item.href" class="pfl-header__item-link">
+                                    <v-img
+                                        :src="item.img.src"
+                                        :alt="item.img.alt"
+                                        :height="item.img.size"
+                                        :width="item.img.size"
+                                        class="pfl-header__social-img rounded-circle"
+                                    />
+                                </a>
                             </v-list-item>
                         </v-list>
                     </v-list-item>

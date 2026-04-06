@@ -1,5 +1,5 @@
 <template>
-    <v-card class="pfl-aboutme pfl-card black white--text" id="aboutme">
+    <v-card color="black" class="pfl-aboutme pfl-card text-white" id="aboutme">
         <v-row>
             <v-col cols="12" md="6">
                 <v-img
@@ -14,8 +14,8 @@
                     <h3 class="pfl-card__head-title">{{ title }}</h3>
                     <div>
                         <v-icon size="8" color="white">mdi-circle</v-icon>
-                        <v-icon size="8" color="white" right>mdi-circle</v-icon>
-                        <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                        <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
+                        <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
                     </div>
                 </div>
                 <div class="pfl-aboutme__description">

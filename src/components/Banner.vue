@@ -7,7 +7,7 @@
         <v-row align="center" justify="center">
             <v-col cols="12" class="col-height-init">
                 <p class="pfl-banner__title mb-0">{{ title }}</p>
-                <p class="pfl-banner__subtitle black--text">{{ subtitle }}</p>
+                <p class="pfl-banner__subtitle text-black">{{ subtitle }}</p>
             </v-col>
         </v-row>
     </v-parallax>

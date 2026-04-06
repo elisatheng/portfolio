@@ -1,3 +1,8 @@
+import logoImg from '@/assets/img/logo.jpg'
+import githubImg from '@/assets/img/socials/github.png'
+import linkedinImg from '@/assets/img/socials/linkedin.png'
+import viadeoImg from '@/assets/img/socials/viadeo.png'
+
 export default {
     name: 'AppHeader',
 
@@ -16,7 +21,7 @@ export default {
 
     data: () => ({
         logo: {
-            src: require('@/assets/img/logo.jpg'),
+            src: logoImg,
             link: '#pfl-body',
             alt: 'Portfolio logo',
             size: 100,
@@ -49,7 +54,7 @@ export default {
             {
                 href: 'https://github.com/elisatheng',
                 img: {
-                    src: require('@/assets/img/socials/github.png'),
+                    src: githubImg,
                     alt: 'Github logo',
                     size: 35,
                 },
@@ -57,7 +62,7 @@ export default {
             {
                 href: 'https://www.linkedin.com/in/elisa-theng/',
                 img: {
-                    src: require('@/assets/img/socials/linkedin.png'),
+                    src: linkedinImg,
                     alt: 'LinkedIn logo',
                     size: 35,
                 },
@@ -65,7 +70,7 @@ export default {
             {
                 href: 'http://www.viadeo.com/fr/profile/elisatheng',
                 img: {
-                    src: require('@/assets/img/socials/viadeo.png'),
+                    src: viadeoImg,
                     alt: 'Viadeo logo',
                     size: 35,
                 },

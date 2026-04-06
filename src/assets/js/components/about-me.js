@@ -1,9 +1,11 @@
+import profileImg from '@/assets/img/profile.png'
+
 export default {
     name: 'AboutMe',
 
     data: () => ({
         profile: {
-            src: require('@/assets/img/profile.png'),
+            src: profileImg,
             alt: 'Profile image',
             size: 250,
         },

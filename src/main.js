@@ -1,33 +1,30 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-
-// plugins
 import vuetify from './plugins/vuetify'
-// components
-import AppHeader from './components/AppHeader'
-import Banner from './components/Banner'
-import AboutMe from './components/AboutMe'
-import Course from './components/Course'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Hobbies from './components/Hobbies'
-import AppFooter from './components/AppFooter'
+
+import AppHeader from './components/AppHeader.vue'
+import Banner from './components/Banner.vue'
+import AboutMe from './components/AboutMe.vue'
+import Course from './components/Course.vue'
+import Projects from './components/Projects.vue'
+import Skills from './components/Skills.vue'
+import Hobbies from './components/Hobbies.vue'
+import AppFooter from './components/AppFooter.vue'
 
 import './assets/css/styles.css'
 import './assets/css/components.css'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-Vue.component('app-header', AppHeader)
-Vue.component('banner', Banner)
-Vue.component('about-me', AboutMe)
-Vue.component('course', Course)
-Vue.component('projects', Projects)
-Vue.component('skills', Skills)
-Vue.component('hobbies', Hobbies)
-Vue.component('app-footer', AppFooter)
+app.use(vuetify)
 
-new Vue({
-    vuetify,
-    render: h => h(App)
-}).$mount('#app')
+app.component('app-header', AppHeader)
+app.component('banner', Banner)
+app.component('about-me', AboutMe)
+app.component('course', Course)
+app.component('projects', Projects)
+app.component('skills', Skills)
+app.component('hobbies', Hobbies)
+app.component('app-footer', AppFooter)
+
+app.mount('#app')

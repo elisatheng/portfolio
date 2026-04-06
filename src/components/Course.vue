@@ -1,12 +1,12 @@
 <template>
-    <v-card class="pfl-course pfl-card red white--text" id="course">
+    <v-card color="red" class="pfl-course pfl-card text-white" id="course">
         <v-row>
             <v-col cols="12" class="pfl-card__head text-center">
                 <h3 class="pfl-card__head-title">{{ title }}</h3>
                 <div>
                     <v-icon size="8" color="white">mdi-circle</v-icon>
-                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
-                    <v-icon size="8" color="white" right>mdi-circle</v-icon>
+                    <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
+                    <v-icon size="8" color="white" class="ml-1">mdi-circle</v-icon>
                 </div>
             </v-col>
         </v-row>
@@ -14,9 +14,10 @@
             <v-col cols="12">
                 <div class="text-center">
                     <v-btn
-                        fab
-                        small
-                        color="grey darken-1"
+                        icon
+                        size="small"
+                        variant="flat"
+                        color="grey-darken-1"
                         data-filter-type="all"
                         class="pfl-course__btn-filter mx-2"
                         @click="filterCourse('all')"
@@ -24,8 +25,9 @@
                         <v-icon color="white">mdi-circle</v-icon>
                     </v-btn>
                     <v-btn
-                        fab
-                        small
+                        icon
+                        size="small"
+                        variant="flat"
                         color="black"
                         data-filter-type="school"
                         class="pfl-course__btn-filter mx-2"
@@ -34,8 +36,9 @@
                         <v-icon color="white">mdi-school</v-icon>
                     </v-btn>
                     <v-btn
-                        fab
-                        small
+                        icon
+                        size="small"
+                        variant="flat"
                         color="black"
                         data-filter-type="work"
                         class="pfl-course__btn-filter mx-2"
@@ -44,18 +47,17 @@
                         <v-icon color="white">mdi-briefcase</v-icon>
                     </v-btn>
                 </div>
-                <v-timeline align-top dense>
+                <v-timeline density="compact" side="end">
                     <v-timeline-item
                         v-for="line in timelines"
                         :key="line.id"
                         :icon="line.icon"
-                        large
-                        right
-                        color="grey darken-1"
+                        size="large"
+                        dot-color="grey-darken-1"
                         :data-course-type="line.type"
                         class="pfl-course__item"
                     >
-                        <template>
+                        <template v-slot:opposite>
                             <span v-for="info in line.infos" :key="info" class="pfl-course__timeline-info">
                                 {{ info }}
                             </span>

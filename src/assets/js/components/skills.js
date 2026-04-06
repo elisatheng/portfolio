@@ -1,4 +1,15 @@
-import VueFlip from 'vue-flip'
+import { VueFlip } from 'vue-flip'
+import phpImg from '@/assets/img/skills/php.png'
+import symfonyImg from '@/assets/img/skills/symfony.png'
+import phpunitImg from '@/assets/img/skills/phpunit.png'
+import elasticsearchImg from '@/assets/img/skills/elasticsearch.png'
+import htmlImg from '@/assets/img/skills/html.png'
+import cssImg from '@/assets/img/skills/css.png'
+import javascriptImg from '@/assets/img/skills/javascript.png'
+import jqueryImg from '@/assets/img/skills/jquery.png'
+import vuejsImg from '@/assets/img/skills/vuejs.png'
+import mysqlImg from '@/assets/img/skills/mysql.png'
+import gitImg from '@/assets/img/skills/git.png'
 
 export default {
     name: 'Skills',
@@ -12,80 +23,47 @@ export default {
         skills: [
             {
                 front: 'PHP',
-                back: {
-                    src: require('@/assets/img/skills/php.png'),
-                    alt: 'PHP logo',
-                },
+                back: { src: phpImg, alt: 'PHP logo' },
             },
             {
                 front: 'Symfony',
-                back: {
-                    src: require('@/assets/img/skills/symfony.png'),
-                    alt: 'Symfony logo',
-                },
+                back: { src: symfonyImg, alt: 'Symfony logo' },
             },
             {
                 front: 'PHPUnit',
-                back: {
-                    src: require('@/assets/img/skills/phpunit.png'),
-                    alt: 'PHPUnit logo',
-                },
+                back: { src: phpunitImg, alt: 'PHPUnit logo' },
             },
             {
                 front: 'ElasticSearch',
-                back: {
-                    src: require('@/assets/img/skills/elasticsearch.png'),
-                    alt: 'ElasticSearch logo',
-                },
+                back: { src: elasticsearchImg, alt: 'ElasticSearch logo' },
             },
             {
                 front: 'HTML',
-                back: {
-                    src: require('@/assets/img/skills/html.png'),
-                    alt: 'HTML logo',
-                },
+                back: { src: htmlImg, alt: 'HTML logo' },
             },
             {
                 front: 'CSS',
-                back: {
-                    src: require('@/assets/img/skills/css.png'),
-                    alt: 'CSS logo',
-                },
+                back: { src: cssImg, alt: 'CSS logo' },
             },
             {
                 front: 'JavaScript',
-                back: {
-                    src: require('@/assets/img/skills/javascript.png'),
-                    alt: 'JavaScript logo',
-                },
+                back: { src: javascriptImg, alt: 'JavaScript logo' },
             },
             {
                 front: 'jQuery',
-                back: {
-                    src: require('@/assets/img/skills/jquery.png'),
-                    alt: 'jQuery logo',
-                },
+                back: { src: jqueryImg, alt: 'jQuery logo' },
             },
             {
                 front: 'VueJS',
-                back: {
-                    src: require('@/assets/img/skills/vuejs.png'),
-                    alt: 'VueJS logo',
-                },
+                back: { src: vuejsImg, alt: 'VueJS logo' },
             },
             {
                 front: 'SQL',
-                back: {
-                    src: require('@/assets/img/skills/mysql.png'),
-                    alt: 'SQL logo',
-                },
+                back: { src: mysqlImg, alt: 'SQL logo' },
             },
             {
                 front: 'Git',
-                back: {
-                    src: require('@/assets/img/skills/git.png'),
-                    alt: 'Git logo',
-                },
+                back: { src: gitImg, alt: 'Git logo' },
             },
         ],
     }),
